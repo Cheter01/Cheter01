@@ -37,13 +37,13 @@
 function move() {
   var elem = document.getElementById("myBar");
   var width = 0;
-  var id = setInterval(frame, 100);
+  var id = setInterval(frame, 365);
   function frame() {
     if (width >= 365) {
       clearInterval(id);
     } else {
       width++;
-      elem.style.width = width + '%';
+      elem.style.width = (width / 365) * 100 + '%';
       document.getElementById("label").innerHTML = (width / 365) * 100  + '%';
     }
   }
