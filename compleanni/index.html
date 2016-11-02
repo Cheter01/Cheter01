@@ -29,15 +29,15 @@
         
       <div id="myProgress">
        <div id="myBar">
-        <div id="label">10%</div>
+        <div id="label">0%</div>
        </div>
       </div>
         
         <script>
 function move() {
   var elem = document.getElementById("myBar");
-  var width = 10;
-  var id = setInterval(frame, 10);
+  var width = 1;
+  var id = setInterval(frame, 1);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
