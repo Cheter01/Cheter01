@@ -1,5 +1,0 @@
-name: Cheter01
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-gems:
-  - jekyll-redirect-from https://cheter01.github.io/cheter01/
