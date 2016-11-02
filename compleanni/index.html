@@ -35,16 +35,23 @@
         
         <script>
 function move() {
+  int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
   var elem = document.getElementById("myBar");
-  var width = 0;
-  var id = setInterval(frame, 65);
+  var width = dayOfYear
+  var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 365) {
+    if (width = 14) {
       clearInterval(id);
     } else {
-      width++;
-      elem.style.width = Math.round((width / 365) * 100) + '%';
-      document.getElementById("label").innerHTML = Math.round((width / 365) * 100)  + '%';
+      if (width > 14){
+     var tempo = (width - 365) - 14;
+       } else {
+       if (width < 14) { 
+         var tempo = width - 14
+         }else{}
+      elem.style.width = Math.round(((tempo * -1)/ 365) * 100) + '%';
+      document.getElementById("label").innerHTML = Math.round(((tempo* -1) / 365) * 100)  + '%';
+      }
     }
   }
 }
