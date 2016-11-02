@@ -50,7 +50,8 @@ function move() {
          var tempo = width - 14
          }else{}
       elem.style.width = Math.round(((tempo * -1)/ 365) * 100) + '%';
-      document.getElementById("label").innerHTML = Math.round(((tempo* -1) / 365) * 100)  + '%';
+      <!--document.getElementById("label").innerHTML = Math.round(((tempo* -1) / 365) * 100)  + '%';-->
+        document.getElementById("label").innerHTML = dayOfYear
       }
     }
   }
