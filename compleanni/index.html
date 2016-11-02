@@ -39,12 +39,12 @@ function move() {
   var width = 0;
   var id = setInterval(frame, 100);
   function frame() {
-    if (width >= 100) {
+    if (width >= 365) {
       clearInterval(id);
     } else {
       width++;
       elem.style.width = width + '%';
-      document.getElementById("label").innerHTML = width * 1  + '%';
+      document.getElementById("label").innerHTML = (width / 365) * 100  + '%';
     }
   }
 }
