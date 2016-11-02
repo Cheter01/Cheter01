@@ -43,8 +43,8 @@ function move() {
       clearInterval(id);
     } else {
       width++;
-      elem.style.width = (width / 365) * 100 + '%';
-      document.getElementById("label").innerHTML = (width / 365) * 100  + '%';
+      elem.style.width = Math.round(width / 365) * 100 + '%';
+      document.getElementById("label").innerHTML = Math.round(width / 365) * 100  + '%';
     }
   }
 }
