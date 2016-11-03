@@ -259,8 +259,52 @@ a {
 
 /* image */
 
-.cornice {
- border-width: 1px 2px 1px 2px;
- border-style: solid;
- border-color: black red black red;
+.gallery {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.gallery li {
+	margin: 20px 10px 5px;
+	float: left;
+	position: relative;
+	width: 186px;
+	height: 142px;
+}
+.gallery .bg {
+	background: url(images/cornici/polaroid-short.png) no-repeat;
+	width: 186px;
+	height: 142px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.gallery em {
+	width: 110px;
+	display: block;
+	padding: 10px;
+	text-align: center;
+	font: italic 100% Georgia, "Times New Roman", Times, serif;
+	color: #333;
+	background: url(images/cornici/tape2.png) no-repeat;
+	position: absolute;
+	top: -17px;
+	left: 30px;
+	z-index: 3;
+}
+
+.gallery a {
+	text-decoration: none;
+	color: #666;
+}
+.gallery a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.gallery img {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	z-index: 2;
 }
