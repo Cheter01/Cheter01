@@ -286,7 +286,7 @@ img {
 .progress-bar span {
     display: inline-block;
     height: 25px;
-    width: 25%;
+    width: 5%;
              
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
