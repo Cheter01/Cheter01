@@ -259,9 +259,11 @@ a {
 
 /* image*/
 
-div.ombra{float:left;margin: 20px;padding:0 0 12px 0;
-    background: url(shadow.png) no-repeat bottom center}
-
-div.ombra img{display: block;border: 1px solid;
-    border-color: #CCC #CCC #AAA #CCC;
-    padding: 5px;background: #f6f6f6}
+#ombra {
+    background: rgb(238, 238, 238);
+    width:200px;
+    padding: 10px;
+    -moz-box-shadow:5px 5px 2px #333333;
+    -webkit-box-shadow:5px 5px 2px #333333;
+    box-shadow:5px 5px 2px #333333;
+}
