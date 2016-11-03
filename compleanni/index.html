@@ -10,7 +10,7 @@
     
   </head>
   
-  <body>
+  <body onload="move()">
 
     <header>
       <div class="container">
@@ -27,43 +27,7 @@
         <h3>
 <a id="Simone_Palai" class="anchor" href="#Simone_Palai" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Simone Palai</h3>
         
-      <div id="myProgress">
-       <div id="myBar">
-        <div id="label">0%</div>
-       </div>
-      </div>
         
-        <script>
-          import java.util.Calendar;
-          import java.util.Date;
-          import java.util.TimeZone;
-          
-function move() {
-  int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
-  var elem = document.getElementById("myBar");
-  var width = dayOfYear
-  var id = setInterval(frame, 1);
-  function frame() {
-    if (width = 14) {
-      clearInterval(id);
-    } else {
-      if (width > 14){
-     var tempo = (width - 365) - 14;
-       } else {
-       if (width < 14) { 
-         var tempo = width - 14
-         }else{}
-      elem.style.width = Math.round(((tempo * -1)/ 365) * 100) + '%';
-      <!--document.getElementById("label").innerHTML = Math.round(((tempo* -1) / 365) * 100)  + '%';-->
-        document.getElementById("label").innerHTML = dayOfYear
-      }
-    }
-  }
-}
-</script>
-
-        
-        <button onclick="move()">Click Me</button>
         
 </section>
     </div>
