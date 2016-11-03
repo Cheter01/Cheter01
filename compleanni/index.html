@@ -6,6 +6,19 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+     $(function(){ 
+
+      $('#bar_change').click(function(){
+          var bar = $('.progress-bar span');
+          var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
+          bar.css('width', value + '%');
+       
+        return false;
+      });
+  });
+    </script>
+      
     <title>Compleanni</title>
     
   </head>
@@ -36,6 +49,12 @@
         <div class="progress-bar">
     <span></span>
         </div>
+        
+        <div class="controls">
+        <label for="bar_value">Valore</label>
+        <input type="text" name="bar_value" id="bar_value" value="25">
+        <input type="submit" id="bar_change" value="Cambia">
+    </div>
        
         
 </section>
