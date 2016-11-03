@@ -260,10 +260,24 @@ a {
 /* image*/
 
 #ombra {
-    background: rgb(238, 238, 238);
-    width:200px;
-    padding: 10px;
-    -moz-box-shadow:5px 5px 2px #333333;
-    -webkit-box-shadow:5px 5px 2px #333333;
-    box-shadow:5px 5px 2px #333333;
+  background: #333333;
+	height: 500px;
+	margin:  150px auto;
+	width: 500px;
+ 
+	/*FireFox*/
+	-moz-box-shadow: 1px 1px 3px rgba(51, 51, 51);
+ 
+	/*Chrome*/
+	-webkit-box-shadow: 1px 1px 3px rgba(51, 51, 51);
+ 
+	/*Opera & IE9*/
+	box-shadow: 1px 1px 3px rgba(51, 51, 51);
+ 
+	/*IE minori di 8*/
+	filter: /* IE6,IE7 e IE8 */
+	progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=0,strength=5) /* top */
+	progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=5) /* left */
+	progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=5) /* bottom */
+	progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=270,strength=5);  /* right */
 }
