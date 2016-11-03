@@ -1,0 +1,10 @@
+$(function(){ 
+
+    $('#bar_change').click(function(){
+        var bar = $('.progress-bar span');
+        var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
+        bar.css('width', value + '%');
+       
+        return false;
+    });
+});
