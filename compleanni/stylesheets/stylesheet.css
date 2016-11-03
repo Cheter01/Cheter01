@@ -272,7 +272,7 @@ a {
 	height: 142px;
 }
 .gallery .bg {
-	background: url(images/cornici/polaroid-short.png) no-repeat;
+	background: url(".../images/cornici/polaroid-short.png") no-repeat;
 	width: 186px;
 	height: 142px;
 	position: absolute;
@@ -286,7 +286,7 @@ a {
 	text-align: center;
 	font: italic 100% Georgia, "Times New Roman", Times, serif;
 	color: #333;
-	background: url(images/cornici/tape2.png) no-repeat;
+	background: url(".../images/cornici/tape2.png") no-repeat;
 	position: absolute;
 	top: -17px;
 	left: 30px;
