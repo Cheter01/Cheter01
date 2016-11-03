@@ -11,6 +11,19 @@
 
       $('#bar_change').click(function(){
           var bar = $('.progress-bar span');
+          var bar_value = data;
+          fuction data() {
+            var now = new Date();
+            var start = new Date(now.getFullYear(), 0, 0);
+            var diff = now - start;
+            var oneDay = 1000 * 60 * 60 * 24;
+            var day = Math.floor(diff / oneDay);
+            
+            if (day > 14) {
+              ((day - 14) / 365) * 100;
+            } else {
+              ((day + 365 - 14) / 365) * 100;
+        
           var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
           bar.css('width', value + '%');
        
@@ -23,7 +36,7 @@
     
   </head>
   
-  <body onload="move()">
+  <body onload="bar_change">
 
     <header>
       <div class="container">
@@ -43,7 +56,7 @@
      <pre text-align: justify >
      <img src=images/Classe/Simone_Palai.jpg alt=Simone_Palai width="100" height="100" style="float: left"> 
         
-     <b><i>14 Gennaio</i></b> 
+      <b><i>14 Gennaio</i></b>
      
       </pre>
         <div class="progress-bar">
@@ -51,8 +64,6 @@
         </div>
         
         <div class="controls">
-        <label for="bar_value">Valore</label>
-        <input type="text" name="bar_value" id="bar_value" value="25">
         <input type="submit" id="bar_change" value="Cambia">
     </div>
        
