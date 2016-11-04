@@ -9,7 +9,7 @@
     <script type="text/javascript">
      $(function(){ 
 
-      $('#bar_change').onload(function(){
+      function Start(){
           var bar = $('.progress-bar span');
             var now = new Date();
             var start = new Date(now.getFullYear(), 0, 0);
@@ -32,7 +32,7 @@
     
   </head>
   
-  <body onload="bar_change">
+  <body onload="Start">
 
     <header>
       <div class="container">
