@@ -11,7 +11,6 @@
 
       $('#bar_change').onload(function(){
           var bar = $('.progress-bar span');
-          <!--fuction data() {-->
             var now = new Date();
             var start = new Date(now.getFullYear(), 0, 0);
             var diff = now - start;
@@ -21,7 +20,7 @@
             if (day > 57) {
               var bar_value = ((day - 57) / 365) * 100;
             } else {
-              var bar_value = ((day + 365 - 14) / 365) * 100;
+              var bar_value = ((day + 365 - 57) / 365) * 100;
         
           var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
           bar.css('width', value + '%');
@@ -54,13 +53,13 @@
 <a id="Lorenzo_Chesi" class="anchor" href="#Lorenzo_Chesi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lorenzo Chesi</h2>
         
      <pre>
-     <img src=images/Classe/Lorenzo_Chesi.png alt=Lorenzo_Chesi width="100" height="100" style="float: left"> 
+     <img src=images/Classe/Lorenzo_Chesi.jpg alt=Lorenzo_Chesi width="100" height="100" style="float: left"> 
         
       <b><i>26 Febbraio</i></b>
      
       </pre>
         <div class="progress-bar">
-    <span><div id="label">1</div></span>
+    <span><div id="label"></div></span>
         </div>
         
        
