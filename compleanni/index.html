@@ -11,7 +11,6 @@
 
       $('#bar_change').onload(function(){
           var bar = $('.progress-bar span');
-          var bar_value = data;
           fuction data() {
             var now = new Date();
             var start = new Date(now.getFullYear(), 0, 0);
@@ -20,12 +19,13 @@
             var day = Math.floor(diff / oneDay);
             
             if (day > 57) {
-              ((day - 57) / 365) * 100;
+              var bar_value = ((day - 57) / 365) * 100;
             } else {
-              ((day + 365 - 14) / 365) * 100;
+              var bar_value = ((day + 365 - 14) / 365) * 100;
         
           var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
           bar.css('width', value + '%');
+          document.getElementById("label").innerHTML = value + '%';
        
         return false;
       });
@@ -60,7 +60,7 @@
      
       </pre>
         <div class="progress-bar">
-    <span></span>
+    <span><div id="label"></div></span>
         </div>
         
        
