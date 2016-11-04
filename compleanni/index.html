@@ -15,6 +15,19 @@
     <script>
       function Start(){
         alert("Page is loaded");
+                  var bar = $('.progress-bar span');
+            var now = new Date();
+            var start = new Date(now.getFullYear(), 0, 0);
+            var diff = now - start;
+            var oneDay = 1000 * 60 * 60 * 24;
+            var day = Math.floor(diff / oneDay);
+            
+            var bar_value = day / 365) * 100;
+        
+          var value = day / 365) * 100;
+          bar.css('width', value + '%');
+       
+        return false;
 }
     </script>
     
@@ -42,6 +55,7 @@
     <span><div id="label"></div></span>
         </div>
         
+        <button onclick="Start()">Click Me</button>
        
         
 </section>
