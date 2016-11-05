@@ -1,3 +1,4 @@
+
 $(function(){ 
 
     $('#bar_change').click(function(){
@@ -8,20 +9,3 @@ $(function(){
         return false;
     });
 });
-
-function move() {
-    var bar = ('.progress-bar span'); 
-    var now = new Date();
-    var start = new Date(now.getFullYear(), 0, 0);
-    var diff = now - start;
-    var oneDay = 1000 * 60 * 60 * 24;
-    var day = Math.floor(diff / oneDay);
-    var value = valore
-     function valore() {
-      if (14 - day < 0) {
-      14 - day + 365
-      } else {
-      14 - day
-     }
-    var percentuale = value
-}
