@@ -18,11 +18,11 @@
             var day = Math.floor(diff / oneDay);
             
             if (day > 57) {
-              var bar_value = ((day - 57) / 365) * 100;
+              var value = ((day - 57) / 365) * 100;
             } else {
-              var bar_value = ((day + 365 - 57) / 365) * 100;
+              var value = ((day + 365 - 57) / 365) * 100;
               
-        var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
+        <!--var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();-->
         bar.css('width', value + '%');
        
         return false;
@@ -52,9 +52,9 @@
         <h2>
 <a id="Lorenzo_Chesi" class="anchor" href="#Lorenzo_Chesi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lorenzo Chesi</h2>
         
-     <pre style=font-size:21px>
+     <pre>
      <img src=images/Classe/Lorenzo_Chesi.jpg alt=Lorenzo_Chesi width="100" height="100" style="float: left">  
-      <b><i>26 Febbraio</i></b>     
+      <p style=font-size:21px><b><i>26 Febbraio</i></b></p>    
       </pre>
         <div class="progress-bar">
     <span></span>
