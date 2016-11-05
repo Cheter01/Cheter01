@@ -19,7 +19,7 @@
             
             if (day > 57) {
               var value = ((day - 57) / 365) * 100;            
-              var giorni = 365 - day - 57;
+              var giorni = 365 - day + 57;
             } else {
               var value = ((day + 365 - 57) / 365) * 100;
               var giorni = 57 - day;
