@@ -19,14 +19,14 @@
             
             if (day > 57) {
               var value = ((day - 57) / 365) * 100;            
-              var giorni = day + 365 - 57;
+              var giorni = 365 - day - 57;
             } else {
               var value = ((day + 365 - 57) / 365) * 100;
-              var giorni = day - 57;
+              var giorni = 57 - day;
             }
    
         bar.css('width', value + '%');
-        document.getElementById("label").innerHTML = giorni + "Giorni";
+        document.getElementById("label").innerHTML = giorni + " Giorni";
        
         return false;
     };
