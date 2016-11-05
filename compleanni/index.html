@@ -25,6 +25,7 @@
               
         <!--var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();-->
         bar.css('width', value + '%');
+        document.getElementById("label").innerHTML = value + '%';
        
         return false;
     };
@@ -53,11 +54,12 @@
         <h2>
 <a id="Lorenzo_Chesi" class="anchor" href="#Lorenzo_Chesi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lorenzo Chesi</h2>
         
-     <pre>
-     <p align="center"><img src=images/Classe/Lorenzo_Chesi.jpg alt=Lorenzo_Chesi width="100" height="100" style="float: left"><b><i>26 Febbraio</i></b></p>      
+     <pre style=font-size:21px>
+     <img src=images/Classe/Lorenzo_Chesi.jpg alt=Lorenzo_Chesi width="100" height="100">
+     <b><i>26 Febbraio</i></b>     
       </pre>
         <div class="progress-bar">
-    <span></span>
+    <span><div id="label"></div></span>
         </div>
         
 </section>
