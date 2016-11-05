@@ -9,14 +9,12 @@
       
     <script type="text/javascript">
         function codeAddress() {
-            $('#bar_change').click(function(){
         var bar = $('.progress-bar span');
         var value = parseInt($('#bar_value').val()) > 100 ? 100 : $('#bar_value').val();
         bar.css('width', value + '%');
        
         return false;
-    });
-};
+    };
         
         </script>
     
@@ -53,10 +51,7 @@
 
         <label for="bar_value">Valore</label>
         <input type="text" name="bar_value" id="bar_value" value="25">
-        <section id="buttons">
         <button type="button" id="bar_change" value="Cambia" class="btn">Cambia</button>
-          </section>
-
         
 </section>
     </div>
