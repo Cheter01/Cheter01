@@ -301,13 +301,13 @@ img {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
  
-    background: rgb(181, 232, 83);
-    background: linear-gradient(bottom, rgb(181, 232, 83) 39%, rgb(181, 232, 83) 70%, rgb(181, 232, 83) 85%);
-    background: -o-linear-gradient(bottom, rgb(181, 232, 83) 39%, rgb(181, 232, 83) 70%, rgb(181, 232, 83) 85%);
-    background: -moz-linear-gradient(bottom, rgb(181, 232, 83) 39%, rgb(181, 232, 83) 70%, rgb(181, 232, 83) 85%);
-    background: -webkit-linear-gradient(bottom, rgb(181, 232, 83) 39%, rgb(181, 232, 83) 70%, rgb(181, 232, 83) 85%);
-    background: -ms-linear-gradient(bottom, rgb(181, 232, 83) 39%, rgb(181, 232, 83) 70%, rgb(181, 232, 83 85%);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.39, rgb(181, 232, 83)), color-stop(0.7, rgb(181, 232, 83)), color-stop(0.85, rgb(181, 232, 83)));
+    background: rgb(170, 197, 119);
+    background: linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
+    background: -o-linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
+    background: -moz-linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
+    background: -webkit-linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
+    background: -ms-linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.39, rgb(170, 197, 119)), color-stop(0.7, rgb(178, 226, 90)), color-stop(0.85, rgb(183, 240, 76)));
 }
 
 .progress-bar span {
