@@ -6,7 +6,7 @@ function Lorenzo_Chesi() {
             var diff = now - start;
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay);
-            var compleanno = document.getElementById("Lorenzo_Chesi").val;
+            var compleanno = document.getElementById("Lorenzo_Chesi").value;
             
             if (day > 57) {
               var value = ((day - compleanno) / 365) * 100;            
