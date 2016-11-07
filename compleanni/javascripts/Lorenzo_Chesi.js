@@ -10,7 +10,7 @@ function Lorenzo_Chesi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -36,7 +36,7 @@ function Simone_Palai() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -62,7 +62,7 @@ function Edison_Dantas() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -88,7 +88,7 @@ function Samuele_Varriale() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -114,7 +114,7 @@ function Francesco_Del_Mondo() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -140,7 +140,7 @@ function Chiara_Di_Cesare() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -166,7 +166,7 @@ function Francesco_Frassi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -192,7 +192,7 @@ function Sara_Fiorentini() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -218,7 +218,7 @@ function Paolo_Lucchesi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -244,7 +244,7 @@ function Sara_Papaleo() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -270,7 +270,7 @@ function Lura_Genua() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -296,7 +296,7 @@ function Martina_Gnudi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -322,7 +322,7 @@ function Dennis_Bonaguidi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -348,7 +348,7 @@ function Leonardo_Prosperi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -374,7 +374,7 @@ function Samy_Abd_Al_Amer() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
@@ -400,7 +400,7 @@ function Francesco_Mottola() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + compl + 1;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
