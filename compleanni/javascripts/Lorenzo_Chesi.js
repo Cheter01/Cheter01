@@ -6,13 +6,14 @@ function Lorenzo_Chesi() {
             var diff = now - start;
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay);
+            var compleanno = document.getElementById("Lorenzo_Chesi").val
             
             if (day > 57) {
-              var value = ((day - 57) / 365) * 100;            
-              var giorni = 365 - day + 57;
+              var value = ((day - compleanno) / 365) * 100;            
+              var giorni = 365 - day + compleanno;
             } else {
-              var value = ((day + 365 - 57) / 365) * 100;
-              var giorni = 57 - day;
+              var value = ((day + 365 - compleanno) / 365) * 100;
+              var giorni = compleanno - day;
             }
    
         bar.css('width', value + '%');
