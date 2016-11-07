@@ -6,18 +6,19 @@ function Lorenzo_Chesi() {
             var diff = now - start;
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay);
-            var compleanno = document.getElementById("bt_Lorenzo_Chesi").value;
+            var compl = document.getElementById("bt_Lorenzo_Chesi").value;
             
-            if (day > compleanno) {
-              var value = ((day - compleanno) / 365) * 100;            
-              var giorni = 365 - day + compleanno;
+            if (day > compl) {
+              var value = ((day - compl) / 365) * 100;            
+              var giorni = 365 - day + compl;
             } else {
-              var value = ((day + 365 - compleanno) / 365) * 100;
-              var giorni = compleanno - day;
+              var value = ((day + 365 - compl) / 365) * 100;
+              var giorni = compl - day;
             }
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
+        //document.getElementById("label").innerHTML =
        
         return false;
     };
