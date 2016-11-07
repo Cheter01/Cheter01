@@ -8,7 +8,7 @@ function Lorenzo_Chesi() {
             var day = Math.floor(diff / oneDay);
             var compleanno = document.getElementById("Lorenzo_Chesi").value;
             
-            if (day > 57) {
+            if (day > compleanno) {
               var value = ((day - compleanno) / 365) * 100;            
               var giorni = 365 - day + compleanno;
             } else {
