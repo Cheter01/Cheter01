@@ -72,8 +72,9 @@ function Edison_Dantas() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Edison Dantas"
-        document.getElementById("compleanno").innerHTML = "25 Gennaio"
+        document.getElementById("Titolo").innerHTML = "Edison Dantas";
+        document.getElementById("compleanno").innerHTML = "25 Gennaio";
+        document.getElementById("myimg").src = "images/Classe/Edison_Dantas.jpg";
        
         return false;
     };
@@ -98,8 +99,9 @@ function Samuele_Varriale() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Samuele Varriale"
-        document.getElementById("compleanno").innerHTML = "30 Gennaio"
+        document.getElementById("Titolo").innerHTML = "Samuele Varriale";
+        document.getElementById("compleanno").innerHTML = "30 Gennaio";
+        document.getElementById("myimg").src = "images/Classe/Samuele_Varriale.jpg";
        
         return false;
     };
@@ -124,8 +126,9 @@ function Francesco_Del_Mondo() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Francesco Del Mondo"
-        document.getElementById("compleanno").innerHTML = "18 Maggio"
+        document.getElementById("Titolo").innerHTML = "Francesco Del Mondo";
+        document.getElementById("compleanno").innerHTML = "18 Maggio";
+        document.getElementById("myimg").src = "images/Classe/Francesco_Del_Mondo.jpg";
        
         return false;
     };
@@ -150,8 +153,9 @@ function Chiara_Di_Cesare() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Chiara Di Cesare"
-        document.getElementById("compleanno").innerHTML = "15 Giugno"
+        document.getElementById("Titolo").innerHTML = "Chiara Di Cesare";
+        document.getElementById("compleanno").innerHTML = "15 Giugno";
+        document.getElementById("myimg").src = "images/Classe/Chiara_Di_Cesare.jpg";
        
         return false;
     };
@@ -176,8 +180,9 @@ function Francesco_Frassi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Francesco Frassi"
-        document.getElementById("compleanno").innerHTML = "21 Giugno"
+        document.getElementById("Titolo").innerHTML = "Francesco Frassi";
+        document.getElementById("compleanno").innerHTML = "21 Giugno";
+        document.getElementById("myimg").src = "images/Classe/Francesco_Frassi.jpg";
        
         return false;
     };
@@ -202,8 +207,9 @@ function Sara_Fiorentini() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Sara Fiorentini"
-        document.getElementById("compleanno").innerHTML = "23 Agosto"
+        document.getElementById("Titolo").innerHTML = "Sara Fiorentini";
+        document.getElementById("compleanno").innerHTML = "23 Agosto";
+        document.getElementById("myimg").src = "images/Classe/Sara_Fiorentini.jpg";
        
         return false;
     };
@@ -228,8 +234,9 @@ function Paolo_Lucchesi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Paolo Lucchesi"
-        document.getElementById("compleanno").innerHTML = "13 Settembre"
+        document.getElementById("Titolo").innerHTML = "Paolo Lucchesi";
+        document.getElementById("compleanno").innerHTML = "13 Settembre";
+        document.getElementById("myimg").src = "images/Classe/Paolo_Lucchesi.jpg";
        
         return false;
     };
@@ -254,8 +261,9 @@ function Sara_Papaleo() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Sara Papaleo"
-        document.getElementById("compleanno").innerHTML = "8 Ottobre"
+        document.getElementById("Titolo").innerHTML = "Sara Papaleo";
+        document.getElementById("compleanno").innerHTML = "8 Ottobre";
+        document.getElementById("myimg").src = "images/Classe/Sara_Papaleo.jpg";
        
         return false;
     };
@@ -280,8 +288,9 @@ function Lura_Genua() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Laura Genua"
-        document.getElementById("compleanno").innerHTML = "8 Novembre"
+        document.getElementById("Titolo").innerHTML = "Laura Genua";
+        document.getElementById("compleanno").innerHTML = "8 Novembre";
+        document.getElementById("myimg").src = "images/Classe/Lura_Genua.jpg";
        
         return false;
     };
@@ -306,8 +315,9 @@ function Martina_Gnudi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Martina Gnudi"
-        document.getElementById("compleanno").innerHTML = "15 Novembre"
+        document.getElementById("Titolo").innerHTML = "Martina Gnudi";
+        document.getElementById("compleanno").innerHTML = "15 Novembre";
+        document.getElementById("myimg").src = "images/Classe/Martina_Gnudi.jpg";
        
         return false;
     };
@@ -332,8 +342,9 @@ function Dennis_Bonaguidi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Dennis Bonaguidi"
-        document.getElementById("compleanno").innerHTML = "3 Dicembre"
+        document.getElementById("Titolo").innerHTML = "Dennis Bonaguidi";
+        document.getElementById("compleanno").innerHTML = "3 Dicembre";
+        document.getElementById("myimg").src = "images/Classe/Dennis_Bonaguidi.jpg";
        
         return false;
     };
@@ -358,8 +369,9 @@ function Leonardo_Prosperi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Leonardo Prosperi"
-        document.getElementById("compleanno").innerHTML = "13 Dicembre"
+        document.getElementById("Titolo").innerHTML = "Leonardo Prosperi";
+        document.getElementById("compleanno").innerHTML = "13 Dicembre";
+        document.getElementById("myimg").src = "images/Classe/Leonardo_Prosperi.jpg";
        
         return false;
     };
@@ -384,8 +396,9 @@ function Samy_Abd_Al_Amer() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Samy Abd Al Amer"
-        document.getElementById("compleanno").innerHTML = "18 Dicembre"
+        document.getElementById("Titolo").innerHTML = "Samy Abd Al Amer";
+        document.getElementById("compleanno").innerHTML = "18 Dicembre";
+        document.getElementById("myimg").src = "images/Classe/Samy_Abd_Al_Amer.jpg";
        
         return false;
     };
@@ -410,8 +423,9 @@ function Francesco_Mottola() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = "??" + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Francesco Mottola"
-        document.getElementById("compleanno").innerHTML = "?? ??"
+        document.getElementById("Titolo").innerHTML = "Francesco Mottola";
+        document.getElementById("compleanno").innerHTML = "?? ??";
+        document.getElementById("myimg").src = "images/Classe/Francesco_Mottola.jpg";
        
         return false;
     };
