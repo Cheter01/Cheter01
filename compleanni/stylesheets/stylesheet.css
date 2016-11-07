@@ -222,9 +222,9 @@ hr {
 }
 
 .btn:focus {
+  display: inline-block;
   text-decoration: none;
   outline:none;
-  border: none;
   box-shadow: none;
 }
 
