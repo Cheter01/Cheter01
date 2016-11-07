@@ -407,7 +407,7 @@ function Francesco_Mottola() {
             }
    
         bar.css('width', value + '%');
-        document.getElementById("label").innerHTML = ?? + " Giorni";
+        document.getElementById("label").innerHTML = "??" + " Giorni";
         document.getElementById("Titolo").innerHTML = "Francesco Mottola"
         document.getElementById("compleanno").innerHTML = "?? ??"
        
