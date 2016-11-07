@@ -1,4 +1,4 @@
-function Lorenzo_chesi() {
+function Lorenzo_Chesi() {
         var bar = $('.progress-bar span');
           
          var now = new Date();
