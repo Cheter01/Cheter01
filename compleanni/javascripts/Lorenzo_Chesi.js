@@ -406,7 +406,7 @@ function Francesco_Mottola() {
               var giorni = compl - day;
             }
    
-        bar.css('width', ?? + '%');
+        bar.css('width', value + '%');
         document.getElementById("label").innerHTML = ?? + " Giorni";
         document.getElementById("Titolo").innerHTML = "Francesco Mottola"
         document.getElementById("compleanno").innerHTML = "?? ??"
