@@ -6,7 +6,8 @@ function Lorenzo_Chesi() {
             var diff = now - start;
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay);
-            var compl = document.getElementById("bt_Lorenzo_Chesi").value;
+            var compl = 57
+                //document.getElementById("bt_Lorenzo_Chesi").value;
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
@@ -18,7 +19,7 @@ function Lorenzo_Chesi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        //document.getElementById("label").innerHTML =
+        //document.getElementById("Titolo").innerHTML = 
        
         return false;
     };
