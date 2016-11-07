@@ -10,7 +10,7 @@ function Lorenzo_Chesi() {
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = 365 - day + compl;
+              var giorni = (365 - day) + compl;
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
