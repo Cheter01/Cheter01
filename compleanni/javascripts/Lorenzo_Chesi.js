@@ -18,8 +18,9 @@ function Lorenzo_Chesi() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Lorenzo Chesi"
-        document.getElementById("compleanno").innerHTML = "26 Febbraio"
+        document.getElementById("Titolo").innerHTML = "Lorenzo Chesi";
+        document.getElementById("compleanno").innerHTML = "26 Febbraio";
+        document.getElementById("myimg").src = "images/Classe/Lorenzo_Chesi.jpg";
        
         return false;
     };
@@ -44,8 +45,9 @@ function Simone_Palai() {
    
         bar.css('width', value + '%');
         document.getElementById("label").innerHTML = giorni + " Giorni";
-        document.getElementById("Titolo").innerHTML = "Simone Palai"
-        document.getElementById("compleanno").innerHTML = "14 Gennaio"
+        document.getElementById("Titolo").innerHTML = "Simone Palai";
+        document.getElementById("compleanno").innerHTML = "14 Gennaio";
+        document.getElementById("myimg").src = "images/Classe/Simone_Palai.jpg";
        
         return false;
     };
