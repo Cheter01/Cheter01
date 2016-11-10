@@ -422,9 +422,9 @@ function Francesco_Mottola() {
             }
    
         bar.css('width', value + '%');
-        document.getElementById("label").innerHTML = "??" + " Giorni";
+        document.getElementById("label").innerHTML = giorni + " Giorni";
         document.getElementById("Titolo").innerHTML = "Francesco Mottola";
-        document.getElementById("compleanno").innerHTML = "?? ??";
+        document.getElementById("compleanno").innerHTML = " 15 Novembre";
         document.getElementById("myimg").src = "images/Classe/Francesco_Mottola.jpg";
        
         return false;
