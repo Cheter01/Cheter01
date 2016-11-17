@@ -226,6 +226,7 @@ hr {
   height: 20px;
   margin: 1px 8px 0 0;
   float: left;
+  align: middle;
 }
 
 .btn-github .icon {
