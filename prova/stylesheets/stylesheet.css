@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background: #151515 url("../images/bkg.png") 0 0;
   color: #eaeaea;
@@ -36,10 +36,8 @@ li {
 */
 
 header {
-  background: rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 50%;
-  border-bottom: 1px dashed #b5e853;
   padding: 20px 0;
   margin: 0 auto;
   position: absolute;
@@ -341,7 +339,7 @@ html {
 
 svg {
   width: 100%;
-  opacity: 50;
+  opacity: 50%;
 }
 line {
   stroke-dasharray: 400;
