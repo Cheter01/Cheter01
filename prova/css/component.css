@@ -10,14 +10,14 @@
 }
 
 .demo-1 .large-header {
-	background-image: url('../images/bkg.jpg');
+	background-image: url('../images/bkg.png');
 }
 
 .main-title {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: #f9f1e9;
+	color: #b5e853;
 	text-align: center;
 	top: 50%;
 	left: 50%;
@@ -26,10 +26,6 @@
 }
 
 .demo-1 .main-title, 
-
-.main-title .thin {
-	font-weight: 200;
-}
 
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title, 
