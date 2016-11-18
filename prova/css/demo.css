@@ -27,6 +27,12 @@ a, button {
 	outline: none;
 }
 
+#Buttons .btn {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+}
+
 a {
 	color: #566473;
 	text-decoration: none;
