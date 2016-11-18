@@ -14,12 +14,13 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #fff;
-	color: #383a3c;
-	font-weight: 400;
-	font-size: 1em;
-	line-height: 1.25;
-	font-family: 'Raleway', Calibri, Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  background: #151515 url("../images/bkg.png") 0 0;
+  color: #eaeaea;
+  font: 40px;
+  line-height: 1.5;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 a, button {
@@ -54,10 +55,23 @@ p.ref {
 }
 
 .codrops-header h1 {
-	margin: 0;
-	font-size: 4.5em;
 	line-height: 1;
 	font-weight: 200;
+	font-size: 30px;
+        line-height: 1.5;
+        margin: 0 auto;
+        font-weight: bold;
+        font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+        color: #b5e853;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+               0 0 5px rgba(181, 232, 83, 0.1),
+               0 0 10px rgba(181, 232, 83, 0.1);
+        letter-spacing: -1px;
+}
+
+.codrops-header h1:before {
+        content: "./";
+        font-size: 24px;
 }
 
 .codrops-header h1 span {
@@ -105,48 +119,58 @@ p.ref {
 	content: "\e004";
 }
 
-/* Demo Buttons Style */
-.codrops-demos {
-	padding-top: 1em;
-	font-size: 0.8em;
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: -o-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: -moz-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: -ms-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  margin: 5px;
+  cursor: pointer;
 }
 
-.codrops-demos a {
-	display: inline-block;
-	margin: 0.35em 0.1em;
-	padding: 0.5em 1.2em;
-	outline: none;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	border-radius: 2px;
-	font-size: 110%;
-	border: 2px solid transparent;
+.btn:hover {
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: -o-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: -moz-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: -ms-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
 }
 
-.codrops-demos a:hover,
-.codrops-demos a.current-demo {
-	border-color: #383a3c;
+.btn:focus {
+  outline:none;
 }
 
-.codrops-demos h3 {
-	margin: 0;
-	padding: 1em 0 0.5em 0;
-	font-size: 0.9em;
-	float: left;
-	min-width: 90px;
-	clear: left;
+.btn .icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 1px 8px 0 0;
+  float: left;
 }
 
-.codrops-demos div:not(:first-child) h3 {
-	padding-top: 2em;
+.btn-github .icon {
+  opacity: 0.6;
+  background: url("../images/blacktocat.png") 0 0 no-repeat;
 }
 
-.codrops-demos a:hover,
-.codrops-demos a.current-demo {
-	color: inherit;
-	border-color: initial;
+.btn-cheter01 .icon {
+  opacity: 0.6;
+  background: url("../images/cheter01.png") 0 0 no-repeat;
 }
 
 /* Related demos */
