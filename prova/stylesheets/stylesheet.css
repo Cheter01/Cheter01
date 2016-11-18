@@ -13,7 +13,7 @@ body {
 .container {
   width: 90%;
   max-width: 600px;
-  margin: 0 auto;
+  /*margin: 0 auto;
 }
 
 section {
@@ -37,6 +37,7 @@ li {
 
 header {
   background: rgba(0, 0, 0, 0.1);
+  text-align: center;
   width: 50%;
   border-bottom: 1px dashed #b5e853;
   padding: 20px 0;
