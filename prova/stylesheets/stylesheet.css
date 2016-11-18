@@ -330,3 +330,27 @@ img {
     -o-transition: width .4s ease-in-out;
     transition: width .4s ease-in-out;
 }
+
+    /* animation background*/
+
+html {
+  text-align: center;
+  background-color: #363636;
+    overflow: hidden;
+}
+
+svg {
+  width: 100%;
+  opacity: 0.7;
+}
+line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 500;
+  animation: offset 2s infinite linear forwards;
+}
+
+@keyframes offset {
+  to {
+    stroke-dashoffset: -900;
+  }
+}
