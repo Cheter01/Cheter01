@@ -14,6 +14,7 @@
 .heart, .heart:before, .heart:after {
   position: absolute;
   width: 150px;
+  height: 150px;
   background: #F6465F;
   transform: rotateZ(-45deg);
 }
