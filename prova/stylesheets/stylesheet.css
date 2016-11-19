@@ -1,3 +1,66 @@
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+.container {
+  /* top:50px; */ 
+  width: 350px;
+  height: 400px;
+}
+
+.heart, .heart:before, .heart:after {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #F6465F;
+  transform: rotateZ(-45deg);
+}
+.heart:after{
+  content: "";
+  border-radius: 50%;
+  left: 75px;
+  animation: rotate-1 3s infinite linear;
+}
+.heart:before{
+  content: "";
+  border-radius: 50%;
+  top: -75px;
+  animation: rotate-2 3s 0.75s infinite linear;
+}
+
+@keyframes rotate-1 {
+  10% {
+    left: -75px;
+  }
+  50% {
+    left: -75px;
+  }
+  60%{
+    left: 75px;
+  }
+  100%{
+    left: 75px;
+  }
+}
+@keyframes rotate-2 {
+  10% {
+    top: 75px;
+  }
+  50% {
+    top: 75px;
+  }
+  60%{
+    top: -75px;
+  }
+  100%{
+    top: -75px;
+  }
+}
+
+
 body {
   margin: 0;
   padding: 0;
