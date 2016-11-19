@@ -90,7 +90,7 @@ input[type=checkbox] + label ~ section .night{
 	opacity:1;
 	position: absolute;
 	top: calc(50% - 120px);
-	left: 30%;
+	left: 10%;
 }
 
 input[type=checkbox] + label ~ section .day{
