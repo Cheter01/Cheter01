@@ -22,8 +22,8 @@ input[type=checkbox] + label{
 	box-shadow: inset 5px 5px 20px rgba(0,0,0,0.5);
 	z-index: 5;
 	position: absolute;
-	top: calc(50% - 50px);
-	left: calc(50% - 80px);
+	top: 0%;
+	left: 0%;
 	cursor: pointer;
 	cursor: hand;
 }
