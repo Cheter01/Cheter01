@@ -1,0 +1,117 @@
+<html>
+<head>
+	<title>Geolocalizzazione tramite JavaScript</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<!-- Tramite il parametro sensor=true cerchiamo di utilizzare il GPS, se presente --->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+</head>
+<body>
+	<center>
+	<p>Esempio di geolocalizzazione tramite JavaScript - <a href="www.bottaioli.it">www.bottaioli.it</a></p>
+	<div id="mylocation">Qui visualizzer&ograve; la tua posizione</div></br>
+	<div id="mymap">Qui visualizzer&ograve; una cartina con la tua posizione</div> </br>
+	<div id="mystreetview">Qui visualizzer&ograve; una bella foto del luogo dove ti trovi</div> </br>
+	<div id="mydistance">Qui visualizzar&ograve; la distanza in Km dal mio ufficio</div> </br>
+	</center>
+ 
+	<script type="text/javascript">
+	var myLocation = document.getElementById("mylocation");
+	function showPosition(position)
+	{
+	var latlon=position.coords.latitude+","+position.coords.longitude;
+	var myMap = document.getElementById("mymap");
+	var img_url="http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&markers=color:red%7Clabel:A%7C"+latlon;
+	myMap.innerHTML="<img src='"+img_url+"'>";
+	} 
+ 
+	function showStreetView(position)
+	{
+	var myStreetView = document.getElementById("mystreetview");
+	var latlon=position.coords.latitude+","+position.coords.longitude;
+	/*
+	** La Key deve essere richiesta su https://code.google.com/apis/console
+	*/
+	var googleAPI="AIzaSyCK0GFWhABTvs0w9t6JSN3J023P6qg_4eg";
+	var img_url="http://maps.googleapis.com/maps/api/streetview?size=400x400&location="+latlon+"&key="+googleAPI+"&sensor=false";
+	myStreetView.innerHTML="<img src='"+img_url+"'>";
+	}
+ 
+	function calculateDistance(position, latitude, longitude)
+	{
+	var lat1 = position.coords.latitude;
+	var lon1 = position.coords.longitude;
+ 
+	/*
+	** Se le coordinate sono uguali... e' inutile fare troppi calcoli!
+	*/
+	if ((lat1 == latitude) && (lon1 == longitude))
+	return 0;
+ 
+	var DEG2RAD = Math.PI / 180.0;
+	lat1 *= DEG2RAD;
+	latitude *= DEG2RAD;
+	lon1 *= DEG2RAD;
+	longitude *= DEG2RAD;
+ 
+	/*
+	** Calcolo la distanza in miglie nautiche
+	*/
+	distance = (60.0 * ((Math.acos((Math.sin(lat1) * Math.sin(latitude)) + (Math.cos(lat1) * Math.cos(latitude) * Math.cos(longitude - lon1)))) / DEG2RAD));
+	/*
+	** Converto le miglie nautiche in KM
+	*/
+	distanceKM = distance / 0.5400734499891;
+ 
+	return distanceKM;
+	}
+ 
+	/*
+	** Se il browser supporta la geolocalizzazione...
+	*/
+	if (navigator.geolocation) 
+	{
+ 
+	navigator.geolocation.getCurrentPosition(
+	function( position )
+	{
+ myLocation.innerHTML ='Secondo me sei qui: Latitudine ' + position.coords.latitude + ' Longitudine ' + position.coords.longitude;
+	showPosition(position);
+	showStreetView(position);
+ 
+	/*
+	** Calcolo la distanza tra le coordinate dell'utente e quelle del mio ufficio
+	** a Bologna
+	*/
+	var dist = calculateDistance(position, 44.485901, 11.402249);
+	var myDist = document.getElementById("mydistance");
+	myDist.innerHTML="Sei distante "+dist+" km dal mio ufficio di Bologna";
+ 
+	},
+	function( error )
+	{
+	switch(error.code)
+	{
+	case error.PERMISSION_DENIED:
+	myLocation.innerHTML = 'Non mi permetti di accedere alla tua posizione';
+	break;
+	case error.POSITION_UNAVAILABLE:
+	myLocation.innerHTML = 'Non riesco a capire dove sei';
+	break;
+	case error.TIMEOUT:
+	myLocation.innerHTML = 'Timeout';
+	break;
+	default:
+	myLocation.innerHTML = 'Non riesco a capire dove sei e non ne capisco il motivo...';
+	break;
+	}
+	}
+	);
+	}
+	else
+	{
+	myLocation.innerHTML ="E' ora che cambi browser... Installane uno piu' aggiornato!"
+	}
+	</script>
+ 
+</body>
+</html>
