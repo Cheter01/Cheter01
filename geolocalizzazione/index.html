@@ -11,11 +11,10 @@
 </head>
 <body>
 	<center>
-	<p>Esempio di geolocalizzazione tramite JavaScript - <a href="www.bottaioli.it">www.bottaioli.it</a></p>
-	<div id="mylocation">Qui visualizzer&ograve; la tua posizione</div></br>
-	<div id="mymap">Qui visualizzer&ograve; una cartina con la tua posizione</div> </br>
-	<div id="mystreetview">Qui visualizzer&ograve; una bella foto del luogo dove ti trovi</div> </br>
-	<div id="mydistance">Qui visualizzar&ograve; la distanza in Km dal mio ufficio</div> </br>
+	<div id="mylocation"></div></br>
+	<div id="mymap"></div> </br>
+	<div id="mystreetview"></div> </br>
+	<div id="mydistance"></div> </br>
 	</center>
  
 	<script type="text/javascript">
@@ -86,9 +85,9 @@
 	** Calcolo la distanza tra le coordinate dell'utente e quelle del mio ufficio
 	** a Bologna
 	*/
-	var dist = calculateDistance(position, 44.485901, 11.402249);
+	var dist = calculateDistance(position, 43.694218, 10.478957);
 	var myDist = document.getElementById("mydistance");
-	myDist.innerHTML="Sei distante "+dist+" km dal mio ufficio di Bologna";
+	myDist.innerHTML="Sei distante "+dist+" km da casa mia ;)";
  
 	},
 	function( error )
