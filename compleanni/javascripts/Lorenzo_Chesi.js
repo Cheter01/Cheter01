@@ -6,11 +6,11 @@ function Lorenzo_Chesi() {
             var diff = now - start;
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay);
-            var compl = document.getElementById("bt_Lorenzo_Chesi").value|0;
+            var compl = document.getElementById("bt_Lorenzo_Chesi").value;
             
             if (day > compl) {
               var value = ((day - compl) / 365) * 100;            
-              var giorni = (365 - day) + compl;
+              var giorni = (365 - day) + parseInt(compl);
             } else {
               var value = ((day + 365 - compl) / 365) * 100;
               var giorni = compl - day;
