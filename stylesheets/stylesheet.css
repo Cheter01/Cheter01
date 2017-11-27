@@ -296,7 +296,8 @@ a {
     background-color: #1a1a1a;
     height: 25px;
     padding: 5px;
-    width: 100%;
+    width: 95%;
+    max-width: 595px;
     margin: 60px 0;
              
     -moz-border-radius: 5px;
