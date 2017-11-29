@@ -311,11 +311,11 @@ a {
     width: 100%;
     /*max-width: 595px;*/
     margin: 60px 0;
-             
+
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-             
+
     -moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
     -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
     box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
@@ -325,15 +325,15 @@ a {
     display: inline-block;
     height: 25px;
     width: 0%;
-             
+
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-             
+
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
- 
+
     background: rgb(170, 197, 119);
     background: linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
     background: -o-linear-gradient(bottom, rgb(170, 197, 119) 39%, rgb(178, 226, 90) 70%, rgb(183, 240, 76) 85%);
@@ -356,4 +356,173 @@ a {
   min-width: 100px;
   max-height: 25px;
   color: #444444;
+}
+
+/*Circle*/
+
+svg {
+
+  top: 12.5%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 0;
+  stroke-linecap: round;
+  opacity: 0;
+  stroke-dasharray: 0.0%, 5.2334%;
+}
+
+.scaleWarp:nth-child(1) {
+  r: 0.01;
+  -webkit-animation: animWarp 1.2s 0s cubic-bezier(0.4, -0.1, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0s cubic-bezier(0.4, -0.1, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(2) {
+  r: 20.01;
+  -webkit-animation: animWarp 1.2s 0.15278s cubic-bezier(0.4, -0.07778, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0.15278s cubic-bezier(0.4, -0.07778, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(3) {
+  r: 40.01;
+  -webkit-animation: animWarp 1.2s 0.30556s cubic-bezier(0.4, -0.05556, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0.30556s cubic-bezier(0.4, -0.05556, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(4) {
+  r: 60.01;
+  -webkit-animation: animWarp 1.2s 0.45833s cubic-bezier(0.4, -0.03333, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0.45833s cubic-bezier(0.4, -0.03333, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(5) {
+  r: 80.01;
+  -webkit-animation: animWarp 1.2s 0.61111s cubic-bezier(0.4, -0.01111, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0.61111s cubic-bezier(0.4, -0.01111, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(6) {
+  r: 100.01;
+  -webkit-animation: animWarp 1.2s 0.76389s cubic-bezier(0.4, 0.01111, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0.76389s cubic-bezier(0.4, 0.01111, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(7) {
+  r: 120.01;
+  -webkit-animation: animWarp 1.2s 0.91667s cubic-bezier(0.4, 0.03333, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 0.91667s cubic-bezier(0.4, 0.03333, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(8) {
+  r: 140.01;
+  -webkit-animation: animWarp 1.2s 1.06944s cubic-bezier(0.4, 0.05556, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.06944s cubic-bezier(0.4, 0.05556, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(9) {
+  r: 160.01;
+  -webkit-animation: animWarp 1.2s 1.22222s cubic-bezier(0.4, 0.07778, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.22222s cubic-bezier(0.4, 0.07778, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(10) {
+  r: 180.01;
+  -webkit-animation: animWarp 1.2s 1.375s cubic-bezier(0.4, 0.1, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.375s cubic-bezier(0.4, 0.1, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(11) {
+  r: 200.01;
+  -webkit-animation: animWarp 1.2s 1.52778s cubic-bezier(0.4, 0.12222, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.52778s cubic-bezier(0.4, 0.12222, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(12) {
+  r: 220.01;
+  -webkit-animation: animWarp 1.2s 1.68056s cubic-bezier(0.4, 0.14444, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.68056s cubic-bezier(0.4, 0.14444, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(13) {
+  r: 240.01;
+  -webkit-animation: animWarp 1.2s 1.83333s cubic-bezier(0.4, 0.16667, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.83333s cubic-bezier(0.4, 0.16667, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(14) {
+  r: 260.01;
+  -webkit-animation: animWarp 1.2s 1.98611s cubic-bezier(0.4, 0.18889, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 1.98611s cubic-bezier(0.4, 0.18889, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(15) {
+  r: 280.01;
+  -webkit-animation: animWarp 1.2s 2.13889s cubic-bezier(0.4, 0.21111, 0.333, 1) infinite alternate;
+          animation: animWarp 1.2s 2.13889s cubic-bezier(0.4, 0.21111, 0.333, 1) infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.scaleWarp:nth-child(15).reverseAnim {
+  -webkit-animation: animWarpReverse 0.72s 1.06944s cubic-bezier(0.8, 0.21111, 0.8, 1) infinite alternate;
+          animation: animWarpReverse 0.72s 1.06944s cubic-bezier(0.8, 0.21111, 0.8, 1) infinite alternate;
+}
+
+@-webkit-keyframes animWarp {
+  0% {
+    stroke-width: 2px;
+    -webkit-transform: scale(1.35) rotate(0deg);
+            transform: scale(1.35) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    stroke-width: 16px;
+    -webkit-transform: scale(1.06667) rotate(0deg);
+            transform: scale(1.06667) rotate(0deg);
+    opacity: 0.06;
+    stroke: #b5e853;
+  }
+}
+
+@keyframes animWarp {
+  0% {
+    stroke-width: 2px;
+    -webkit-transform: scale(1.35) rotate(0deg);
+            transform: scale(1.35) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    stroke-width: 16px;
+    -webkit-transform: scale(1.06667) rotate(0deg);
+            transform: scale(1.06667) rotate(0deg);
+    opacity: 0.06;
+    stroke: #b5e853;
+  }
+}
+.w2 {
+  opacity: 1;
+  stroke-width: 500px;
 }
