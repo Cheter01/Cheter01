@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #c55;
+  font-family: 'Overpass', 'Open Sans', sans-serif;
+}
+
+h1 {
+  color: white;
+  display: block;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+h1:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100px;
+  margin: 2vmax auto 5px auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#worldmap_icon {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding: 40px 20px 40px 20px;
+}
+
+.lat-long {
+  font-weight: 800;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.svg-container {
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+}
