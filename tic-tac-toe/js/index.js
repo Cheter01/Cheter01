@@ -24,20 +24,6 @@ $(document).ready(function() {
     }
   });
 
-  /* Player class has been switched from the settings menu */
-  // $(".board__settings__choice-cross").click(function() {
-  //   PLAYER_CLASS = 'cross';
-  //   COMPUTER_CLASS = 'nought';
-  //   $(".board__settings").css('visibility', 'hidden');
-  //   console.log('set class to cross');
-  // });
-  //
-  // $(".board__settings__choice-nought").click(function() {
-  //   PLAYER_CLASS = 'nought';
-  //   COMPUTER_CLASS = 'cross';
-  //   $(".board__settings").css('visibility', 'hidden');
-  // });
-
   /* Difficulty selected */
   $("div[class*=board__difficulty__button]").click(function() {
     var difficulty = 'medium';
@@ -69,7 +55,7 @@ $(document).ready(function() {
           RUNNING = false;
   				$(".board__header-difficulty").html("Hai vinto!");
           $(".board__difficulty").removeClass('slideUp').addClass('slideDown');
-          location.replace('./lucky-cat/index.html');
+          // location.replace('./lucky-cat/index.html');
   			} else {
   				minimax(GAMEBOARD, "O", 0);
   				GAMEBOARD[AI_MOVE] = "O";
