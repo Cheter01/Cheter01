@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   text-align: center;
   border-radius: 30px;
-  background-color: rgba(68, 68, 68, 0.4);
+  background-color: rgba(28, 28, 28, 0.4);
 }
 .board-default:before, .board:before, .board__settings:before, .board__difficulty:before {
   content: '';
@@ -25,7 +25,7 @@ body {
   right: -15px;
   bottom: -15px;
   border-radius: 51px;
-  border: 15px solid rgba(68, 68, 68, 0.05);
+  border: 15px solid rgba(0, 0, 0, 0.05);
 }
 @media (min-width: 450px) {
   .board-default, .board, .board__settings, .board__difficulty {
@@ -73,7 +73,7 @@ body {
   background-color: rgba(68, 68, 68, 0.1);
 }
 .board__slot:active {
-  border: 2px solid rgba(68, 68, 68, 0.09);
+  border: 2px solid rgba(18, 18, 18, 0.09);
 }
 
 .board__difficulty {
@@ -110,7 +110,7 @@ body {
   font-size: 1em;
   width: 150px;
   background-color: #1B1B1B;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   color: #B5E853;
 }
 .board__difficulty__button:before, .board__difficulty__button-easy:before, .board__difficulty__button-medium:before, .board__difficulty__button-hard:before, .board__difficulty__button:after, .board__difficulty__button-easy:after, .board__difficulty__button-medium:after, .board__difficulty__button-hard:after {
