@@ -55,7 +55,7 @@ $(document).ready(function() {
           RUNNING = false;
   				$(".board__header-difficulty").html("Hai vinto!");
           $(".board__difficulty").removeClass('slideUp').addClass('slideDown');
-          // location.replace('./lucky-cat/index.html');
+          location.replace('./lucky-cat/index.html');
   			} else {
   				minimax(GAMEBOARD, "O", 0);
   				GAMEBOARD[AI_MOVE] = "O";
