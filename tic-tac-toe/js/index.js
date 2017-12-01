@@ -49,7 +49,7 @@ $(document).ready(function() {
 
   			if (full(GAMEBOARD)) {
           RUNNING = false;
-  				$(".board__header-difficulty").html("It's a tie!");
+  				$(".board__header-difficulty").html("Pareggio!");
           $(".board__difficulty").removeClass('slideUp').addClass('slideDown');
   			} else if (wins(GAMEBOARD, "X")) {
           RUNNING = false;
