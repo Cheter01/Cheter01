@@ -1,0 +1,20 @@
+.board__settings
+  i.fa.fa-cog.board__settings-cog
+  h1.board__header-settings Choose Player
+    .board__row
+      .board__settings__choice-cross
+      .board__settings__choice-nought
+.board__difficulty
+  i.fa.fa-cog.board__settings-cog
+  h1.board__header-difficulty Select Difficulty
+  #easy.board__difficulty__button-easy Easy
+  #medium.board__difficulty__button-medium Medium
+  #hard.board__difficulty__button-hard Hard
+.board
+  - for (var j = 0; j < 9; j++)
+    if (j == 0 || j % 3 == 0)
+      .board__row
+        - for (var i = j; i < (3 + j); i++)
+          - if (i >= 9) break;
+            input(type='radio').board__slot-hidden
+            label(id=i).board__slot
