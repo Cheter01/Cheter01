@@ -9,21 +9,16 @@ body {
 	margin: 0;
 }
 
-.video {
-  max-width: 300px;
-  margin-top: 10px;
+.song {
+  max-width: 250px;
+  margin-top: 500px;
   border: solid #b5e853;
   border-radius: 4px;
-  padding: 5px;
+  position: fixed;
 }
 
 
 
-.page_box {
-  width: auto;
-  max-width: 650px;
-  margin: 0 auto;
-}
 
 .container {
 	position: absolute;
