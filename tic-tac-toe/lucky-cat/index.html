@@ -5,12 +5,12 @@
   <title>Lucky Cat</title>
   <meta name="viewport" content="width=device-width">
 
-
       <link rel="stylesheet" href="css/style.css">
+      <script src=js/music.js></script>
 
 </head>
 
-<body>
+<body onload="enableAutoplay()">
 
 <div class="page_box" align="center">
 
@@ -47,7 +47,7 @@
 	<div class="foot right"></div>
 </div>
 
-<video width="100" playsinline autoplay align="middle" loop class="video">
+<video id="myVideo" width="100" playsinline autoplay align="middle" loop class="video">
   <source src="music/Electric Angel.mp4" type="video/mp4">
 </video>
 </div>
