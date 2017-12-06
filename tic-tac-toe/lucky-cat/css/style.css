@@ -9,6 +9,22 @@ body {
 	margin: 0;
 }
 
+.video {
+  max-width: 300px;
+  margin-top: 10px;
+  border: solid #b5e853;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+
+
+.page_box {
+  width: auto;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
 .container {
 	position: absolute;
 	margin: auto;
@@ -414,7 +430,7 @@ body {
 	0% {
 		-webkit-transform: translate(0,0);
 	}
-	
+
 	100% {
 		-webkit-transform: translate(0,50px);
 		height: 56px;
@@ -425,7 +441,7 @@ body {
 	0% {
 		-moz-transform: translate(0,0);
 	}
-	
+
 	100% {
 		-moz-transform: translate(0,50px);
 		height: 56px;
@@ -436,7 +452,7 @@ body {
 	0% {
 		transform: translate(0,0);
 	}
-	
+
 	100% {
 		transform: translate(0,50px);
 		height: 56px;
@@ -447,11 +463,11 @@ body {
 	0% {
 		-webkit-transform: rotate(0deg);
 	}
-	
+
 	50% {
 		-webkit-transform: scale(1.2);
 	}
-	
+
 	100% {
 		-webkit-transform: rotate(0deg);
 	}
@@ -461,11 +477,11 @@ body {
 	0% {
 		-moz-transform: rotate(0deg);
 	}
-	
+
 	50% {
 		-moz-transform: scale(1.2);
 	}
-	
+
 	100% {
 		-moz-transform: rotate(0deg);
 	}
@@ -475,11 +491,11 @@ body {
 	0% {
 		transform: rotate(0deg);
 	}
-	
+
 	50% {
 		transform: scale(1.2);
 	}
-	
+
 	100% {
 		transform: rotate(0deg);
 	}
