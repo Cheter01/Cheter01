@@ -19,10 +19,9 @@ body {
 
 
 
-
 .container {
 	position: absolute;
-	margin: auto;
+	margin: 80px auto;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -494,4 +493,36 @@ body {
 	100% {
 		transform: rotate(0deg);
 	}
+}
+
+
+/*StrtStop*/
+
+.startStop {
+  position: relative;
+	margin: 20px auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.startStop span {
+  width: 8px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  float: left;
+  margin-right: 16px;
+}
+.startStop span:nth-child(3) {
+  margin-left: -24px;
+}
+.startStop.active span:nth-child(2) {
+  -webkit-transform: translate(-4px, 11px) rotate(60deg);
+          transform: translate(-4px, 11px) rotate(60deg);
+}
+.startStop.active span:nth-child(3) {
+  -webkit-transform: translate(-4px, -11px) rotate(-60deg);
+          transform: translate(-4px, -11px) rotate(-60deg);
 }
