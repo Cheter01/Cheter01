@@ -6,7 +6,7 @@ const HEX_R = HEX_T * (Math.sqrt(3)/2);
 //set build animation speed here
 const BUILDSPEED = 150;
 //set search animation speed here
-const SEARCHSPEED = 50;
+const SEARCHSPEED = 1;
 
 //set to true for a different algorithm
 const METHOD = false;
