@@ -1,5 +1,5 @@
 //set field size here
-const HEX_T = 8;
+const HEX_T = 15;
 
 const HEX_R = HEX_T * (Math.sqrt(3)/2);
 
@@ -564,7 +564,7 @@ function onClick() {
     building = false;
     searchig = false;
     stepcount = 0;
-    infoElement.innerHTML = "Inizia costruzione del labirinto";
+    infoElement.innerHTML = "Inizia la costruzione del labirinto";
     //mazeCtx.clearRect(0, 0, mazeCtx.canvas.width + HEX_T, mazeCtx.canvas.height + HEX_T);
     newMaze();
   }
