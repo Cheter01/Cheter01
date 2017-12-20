@@ -19,21 +19,37 @@
     <style>
       body {
         background-color:#dbd9d2;
+
       }
 
-      h1, h2{
+      h1, h2, h3{
+        text-align: center;
         font-family: Comic Sans MS; <!-- Io preferisco il comic sans -->
       }
 
-      img {
+      #img1 {
         border: solid #ffffff;
         border-radius: 4px;
         padding: 5px;
+        width: 60%;
+        height: 30%;
       }
-      hr {
+
+      #img2 {
+        width: 200px;
+        height: 100px;
+      }
+
+      #hr1 {
         height: 10px;
 	      border: 0;
-	      box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	      box-shadow: 0 10px 10px -10px #000000 inset;
+      }
+
+      #hr2 {
+        height: 10px;
+        border: 0;
+        box-shadow: 0 10px 10px -10px #d5f2f0 inset;
       }
 
       table {
@@ -41,7 +57,6 @@
         text-align: center;
         border: 1px solid #000000;
         background-color: #000000;
-        max-hight: 20
       }
 
       th {
@@ -59,16 +74,19 @@
   </head>
 
   <body>
-    <h1 align='middle'>Compito di Informatica</h1>
-    <h2 align='middle'>13 Dicembre 2017</h2>
-    <hr>
-    <h1 align='middle' style="font-family:Comic Sans MS;">IPhone 8</h1>
+    <h1>Compito di Informatica</h1>
+    <h2>13 Dicembre 2017</h2>
+    <hr id="hr1">
+    <h1>IPhone 8</h1>
     <div align='middle'>
-      <img src='img/Iphone8.jpg' alt='Iphone 8' style="width: 60%; height: 30%;">
+      <img src='img/Iphone8.jpg' id="img1" alt='Iphone 8'>
     </div>
     <br>
     <table>
       <tr>
+        <th rowspan="2">
+          <img src='img/Iphone8_2.jpg' id="img2" alt='Iphone 8'>
+        </th>
         <th>Penta Band</th>
         <th>Fotocamere</th>
         <th>Sistema Operativo</th>
@@ -85,5 +103,7 @@
         <td>A11 Bionic + Coprocessore M11 integrato</td>
       </tr>
     </table>
+    <hr id="hr2">
+    <h3>Caratteristiche</h3>
   </body>
 </html>
