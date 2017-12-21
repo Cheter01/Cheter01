@@ -2,29 +2,21 @@
 <html>
   <head>
 
-    <!-- Ho aggiunto i meta data perchè credo siano importanti, anche se non l'ha richiesti -->
-		<meta name="description" content="Una semplice pagina di cheter01"> <!-- Non sapevo casa scriverci :) -->
-		<meta name="author" content="cheter01"> <!-- cheter01 è il mio nickname -->
-		<meta name="copyright" content="cheter01">
-		<meta name="dc.language" content="ita" scheme="RFC1766">
-		<meta http-equiv="pragma" content="no-cache">
-    <!-- Questo serve per il telefono -->
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="shorcut icon" type="image/x-icon" href="img/Cheter01.ico" media="all">
+    <link rel="shorcut icon" type="image/x-icon" href="img/Cheter01.ico" media="all"> <!-- Ho messo un immagine a caso perchè non mi piaceva lasciarlo senza immagine -->
 
     <title>Compito di Informatica</title>
 
     <!-- Il css è più facile da modificare :) -->
     <style>
+
       body {
         background-color:#dbd9d2;
-
+        margin: 0 auto;
       }
 
-      h1, h2, h3{
+      h1, h2, h3 {
         text-align: center;
-        font-family: Comic Sans MS; <!-- Io preferisco il comic sans -->
+        font-family: Arial;
       }
 
       #img1 {
@@ -40,15 +32,16 @@
         height: 100px;
       }
 
-      #hr1 {
+      hr {
         height: 10px;
-	      border: 0;
+	      border: 10px;
+      }
+
+      #hr1 {
 	      box-shadow: 0 10px 10px -10px #000000 inset;
       }
 
       #hr2 {
-        height: 10px;
-        border: 0;
         box-shadow: 0 10px 10px -10px #d5f2f0 inset;
       }
 
@@ -78,7 +71,7 @@
     <h2>13 Dicembre 2017</h2>
     <hr id="hr1">
     <h1>IPhone 8</h1>
-    <div align='middle'>
+    <div align="middle">
       <img src='img/Iphone8.jpg' id="img1" alt='Iphone 8'>
     </div>
     <br>
@@ -105,5 +98,24 @@
     </table>
     <hr id="hr2">
     <h3>Caratteristiche</h3>
+    <br>
+    <ul>
+      <li>Splendida Intelligenza</li>
+      <li>Design in vetro</li>
+      <li>Resistente all'acqua e alla polvere</li>
+      <li>Ricarica Wireless</li>
+      <li>Display retina HD</li>
+      <li>True Tone</li>
+      <li>Colori Illanti</li>
+    </ul>
+    <h3>Inoltre… </h3>
+    <br>
+    <ol>
+      <li>iPhone 8 e iPhone 8 Plus sono resistenti agli schizzi, alle gocce e alla polvere; sono stati testati in laboratorio in condizioni controllate, con un rating di grado IP67 secondo lo standard IEC 60529. La resistenza agli schizzi, alle gocce e alla polvere non è una caratteristica permanente e potrebbe diminuire con la normale usura. Non tentare di ricaricare il tuo iPhone quando è bagnato; consulta il manuale per pulirlo e asciugarlo. La garanzia non copre i danni provocati da liquidi.</li>
+      <li>Richiede un caricabatterie wireless (in vendita separatamente).</li>
+      <li>La dimensione del display è misurata in diagonale.</li>
+      <li>La funzione “Illuminazione ritratto” è disponibile in versione beta.</li>
+      <li>La durata della batteria varia a seconda dell’uso e della configurazione; vai su <a href="www.apple.com/it/batteries" alt="per saperne di più">www.apple.com<a></li>
+    </ol>
   </body>
 </html>
