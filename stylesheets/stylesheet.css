@@ -14,7 +14,7 @@ body {
 .page_box {
   width: 90%;
   max-width: 750px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   background: #151515 url("../images/bkg.png") 0 0;
   color: #eaeaea;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -365,6 +365,7 @@ a {
   position: fixed;
   bottom: 0;
   overflow: hidden;
+  width: 50%;
 }
 
 /*gear*/
