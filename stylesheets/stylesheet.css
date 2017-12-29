@@ -389,7 +389,8 @@ a {
   box-shadow: 0 0 0 3.3px var(--color_04); /*10px*/
   border-radius: 50%;
   display: inline-block;
-  margin-top: 3.3px; /*10px*/
+  /* margin-top: 3.3px; /*10px*/
+  margin: 3.3px auto;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -443,37 +444,6 @@ a {
   -webkit-animation: turn 4s linear 3000;
           animation: turn 4s linear 3000;
 }
-.wheel:nth-child(8) {
-  width: 55px; /*165px*/
-  height: 55px; /*165px*/
-  -webkit-animation: turn 2s linear 3000;
-          animation: turn 2s linear 3000;
-}
-.wheel:nth-child(9) {
-  width: 17px; /*51px*/
-  height: 17px; /*51px*/
-  -webkit-animation: turn 2s linear 3000;
-          animation: turn 2s linear 3000;
-}
-.wheel:nth-child(10) {
-  width: 41.3px; /*124px*/
-  height: 41.3px; /*124px*/
-  -webkit-animation: turn 5s linear 3000;
-          animation: turn 5s linear 3000;
-}
-.wheel:nth-child(11) {
-  width: 10px; /*30px*/
-  height: 10px; /*30px*/
-  -webkit-animation: turn 3s linear 3000;
-          animation: turn 3s linear 3000;
-}
-.wheel:nth-child(12) {
-  width: 45px; /*135px*/
-  height: 45px; /*135px*/
-  -webkit-animation: turn 2s linear 3000;
-          animation: turn 2s linear 3000;
-}
-
 @-webkit-keyframes turn {
   0%, 100% {
     stroke-dasharray: 1600;
