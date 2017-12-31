@@ -29,13 +29,14 @@ body {
   color: #eaeaea;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
-	padding: 0 0 10px 0;
+	/* padding: 0 0 10px 0; */
 }
 
 .container {
   width: 90%;
   max-width: 700px;
   margin: 0 auto;
+	padding: 0;
 }
 
 section {
@@ -61,7 +62,7 @@ header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px dashed #b5e853;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   margin: 0 0 40px 0;
 }
 
@@ -273,6 +274,53 @@ hr {
 .btn-drive .icon {
   opacity: 0.6;
   background: url("../images/drive.png") 0 0 no-repeat;
+}
+button {
+	display: inline-block;
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: -o-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  background: -moz-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+	background: -ms-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+	padding: 8px 50%;
+	max-width: 220px;
+	border-radius: 50px;
+	border: 2px solid rgba(0, 0, 0, 0.7);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+	border-top: 2px solid rgba(0, 0, 0, 1);
+	color: rgba(255, 255, 255, 0.8);
+	font-family: 'Hylia Serif Beta';
+	font-weight: bold;
+	font-size: 80%;
+	letter-spacing: 0.7px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+	margin: 5px auto 0 auto;
+	cursor: pointer;
+	text-align: left;
+}
+
+button:active {
+outline: none;
+border: 2px solid rgba(0, 0, 0, 0.7);
+border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+border-top: 2px solid rgba(0, 0, 0, 1);
+}
+
+button:hover {
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: -o-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: -moz-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  background: -ms-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline:0;
 }
 
 /* Links
@@ -547,4 +595,13 @@ a {
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
 
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+#ip {
+	font-family: 'Hylia Serif Beta';
+	color: #ffffff;
+	position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 50%;
 }

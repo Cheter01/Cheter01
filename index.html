@@ -15,14 +15,32 @@
 		<link rel="shorcut icon" type="image/x-icon" href="images/Cheter01.ico" media="all">
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css" media="screen">
 
 		<title>Cheter01</title>
     </head>
 
-    <body>
+    <body onload="document.getElementById('id01').style.display='block'">
       <div id='snow'>
+        <span id="ip"></span>
+
+        <!-- login system -->
+        <div id="id01" class="modal">
+
+          <form class="modal-content animate" >
+
+            <div class="container">
+              <label><b>Username</b></label>
+              <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+              <label><b>Password</b></label>
+              <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+
+              <button id="login" type="button" onclick="log()">Login</button>
+            </div>
+          </form>
+        </div>
+
       <div class="page_box">
     		    <header>
     		        <div class="container">
@@ -116,5 +134,8 @@
         <img src="https://counter2.freecounter.ovh/private/contatoreaccessi.php?c=4e9h11ml2txp5q5xb7lc9g82brstdu9t">
         </div>
       </div>
+      <script src=javascripts/main.js></script>
+      <script type="text/javascript" src="javascripts/login.js"></script>
+      <script type="text/javascript" src="javascripts/ip.js"></script>
     </body>
 </html>
