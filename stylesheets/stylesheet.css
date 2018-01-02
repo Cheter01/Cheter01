@@ -358,6 +358,7 @@ a {
     border: solid #b5e853;
     border-radius: 4px;
     padding: 5px;
+		float: left;
 }
 
 #img-avatar {
