@@ -426,10 +426,14 @@ a {
   color: #444444;
 }
 
-/* contatore pagine bord pagina */
-@media (max-width:800px) {
+/* contatore pagine bordo pagina e idirizzo ip*/
+@media (max-width:980px) {
   #counter {
     display: none;
+	}
+
+		#ip {
+	    display: none;
   }
 }
 
@@ -438,6 +442,15 @@ a {
   bottom: 0;
   overflow: hidden;
   width: 50%;
+}
+
+#ip {
+	font-family: 'Hylia Serif Beta';
+	color: #ffffff;
+	position: fixed;
+  bottom: 0;
+	right: 0;
+  overflow: hidden;
 }
 
 /*gear*/
@@ -596,13 +609,4 @@ a {
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
 
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
-}
-
-#ip {
-	font-family: 'Hylia Serif Beta';
-	color: #ffffff;
-	position: fixed;
-  bottom: 0;
-	right: 0;
-  overflow: hidden;
 }
