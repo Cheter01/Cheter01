@@ -46,6 +46,13 @@ span.psw {
     padding-top: 60px;
 }
 
+.login {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+	padding: 10px;
+}
+
 /* Modal Content/Box */
 .modal-content {
     background-color: rgba(21, 21, 21, 0.9);

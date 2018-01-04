@@ -41,10 +41,11 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 
 // Usage
 
+
 getUserIP(function(ip){
 		document.getElementById("ip").innerHTML = ip;
     if(ip == "192.168.1.105") {
-      // modal.style.display = "none";
+      modal.style.display = "none";
    }else{
    }
 });
