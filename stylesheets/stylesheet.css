@@ -72,7 +72,9 @@ body {
 }
 
 .navbar {
-	width: 100%;
+	/* max-width: 900px; */
+	background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+	border-radius: 0 0 20px 20px;
 	padding: 10px;
   overflow: hidden;
   position: fixed;
