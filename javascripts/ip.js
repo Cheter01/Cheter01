@@ -41,7 +41,7 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 
 // Usage
 
-
+var modal = document.getElementById('id01');
 getUserIP(function(ip){
 		document.getElementById("ip").innerHTML = ip;
     if(ip == "192.168.1.105") {

@@ -65,17 +65,23 @@ body {
 }
 
 .container-head {
-  width: 90%;
-  max-width: 700px;
-  margin: 0 auto;
-	padding: 10px;
-}
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		width: 90%;
+		margin: 0 auto;
+	  max-width: 750px;
+    padding: 10px 38px;
+	}
+
+.container-ex {
+	  padding: 10px;
+		margin: 12.5px auto;
+	}
 
 .navbar {
 	/* max-width: 900px; */
 	background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
-	border-radius: 0 0 20px 20px;
-	padding: 10px;
+	/* border-radius: 0 0 20px 20px; */
+	/* padding: 10px; */
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -83,6 +89,9 @@ body {
 	transform: translateX(-50%);	 /* Per centrarlo */
 	background: url("../images/bkg.png");
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: grid;
+	grid-template-columns: auto 750px auto;
+	justify-content: space-evenly;
 }
 
 section {
@@ -108,8 +117,24 @@ header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px dashed #b5e853;
-  padding: 20px 0 0 0;
+  /* padding: 20px 0 0 0; */
   /* margin: 0 0 40px 0; */
+}
+
+@media (max-width:1070px) {
+	.container-ex {
+		display: none;
+	}
+
+	.navbar {
+		display: inline;
+	}
+
+	.container-head {
+			width: 90%;
+			max-width: 680px;
+	    padding: 10px 35px;
+		}
 }
 
 header h1 {
@@ -404,6 +429,13 @@ a {
     border-radius: 4px;
     padding: 5px;
 		float: left;
+}
+
+#img-ex {
+	width: 130px;
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.2), 0 6px 20px 0 rgba(0, 0, 0, 3.19); */
+	border-radius: 50%;
+	margin: auto;
 }
 
 #img-avatar {
