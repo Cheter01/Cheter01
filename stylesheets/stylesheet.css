@@ -312,18 +312,6 @@ hr {
   cursor: pointer;
 }
 
-.btn:hover {
-  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-  background: linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-  background: -o-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-  background: -moz-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-  background: -ms-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-}
-
-.btn:focus {
-  outline:none;
-}
-
 .btn .icon {
   display: inline-block;
   width: 16px;
@@ -371,6 +359,7 @@ button {
 	/* text-align: center; */
 }
 
+.btn:active,
 button:active {
 outline: none;
 border: 2px solid rgba(0, 0, 0, 0.7);
@@ -378,6 +367,7 @@ border-bottom: 2px solid rgba(0, 0, 0, 0.7);
 border-top: 2px solid rgba(0, 0, 0, 1);
 }
 
+.btn:hover,
 button:hover {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
   background: linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
@@ -389,7 +379,8 @@ button:hover {
 input:focus,
 select:focus,
 textarea:focus,
-button:focus {
+button:focus,
+.btn:focus {
 	outline:0;
 }
 
@@ -503,7 +494,7 @@ a {
 }
 
 /* contatore pagine bordo pagina e idirizzo ip*/
-@media (max-width:980px) {
+@media (max-width:1015px) {
   #counter {
     display: none;
 	}
