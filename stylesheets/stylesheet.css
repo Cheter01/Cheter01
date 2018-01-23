@@ -96,10 +96,10 @@ body {
 	background: rgba(0, 0, 0, 0);
 }
 
-section {
+/* section {
   display: block;
   margin: 0 0 20px 0;
-}
+} */
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
@@ -176,6 +176,7 @@ header h2 {
   display: inline-block;
   text-align: center;
   margin: 0;
+	padding-top: 10px;
 }
 
 /* Main Content
@@ -311,7 +312,7 @@ hr {
 	text-decoration: none;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-	margin: 5px auto;
+	margin: 7px auto;
   cursor: pointer;
 }
 

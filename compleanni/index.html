@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/github-dark.css" media="screen">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="../stylesheets/background.css"> -->
+    <link rel="stylesheet" href="css/sidenav.css"> <!-- sidenav -->
+    <script type="text/javascript" src="javascripts/sidenav.js"></script> <!-- sidenav -->
 
 
     <script src=javascripts/main.js></script>
@@ -58,11 +60,14 @@
 
         <div class="progress-bar">
           <span>
-            <div id="label"</div>
+            <div id="label"></div>
           </span>
         </div>
       </section>
 
+      <button onclick="sidenav()" align="center">&#9776; open &#9776;</button>
+
+      <div id="mySidenav" class="sidenav" >
       <section id="buttons" align="center">
         <button class="btn" onclick='seleziona("Edison","Dantas",25,25,"Gennaio")' id='Edison Dantas'>Edison Dantas</button>
         <button class="btn" onclick='seleziona("Lorenzo","Chesi",57,26,"Febbraio")' id='Lorenzo Chesi'>Lorenzo Chesi</button>
@@ -77,6 +82,7 @@
 		    <button class="btn" onclick='seleziona("Dennis","Bonaguidi",337,3,"Dicembre")' id='Dennis Bonaguidi'>Dennis Bonaguidi</button>
 		    <button class="btn" onclick='seleziona("Leonardo","Prosperi",347,13,"Dicembre")' id='Leonardo Prosperi'>Leonardo Prosperi</button>
       </section>
+    </div>
 
       <hr>
 
