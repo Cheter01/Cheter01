@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   /* background-color: rgba(21, 21, 21, 0); */
   background: #151515 url("../images/footer_lodyas.png") 0 0;
   color: #eaeaea;
@@ -49,7 +49,7 @@ body {
 .page_box {
   width: 90%;
   max-width: 750px;
-	margin: 0 auto;
+	margin: 0 auto auto auto;
   background: #151515 url("../images/bkg.png") 0 0;
   color: #eaeaea;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6), 0 0px 20px 0 rgba(0, 0, 0, 0.59);
