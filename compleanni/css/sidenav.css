@@ -11,7 +11,7 @@
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6) inset;
     border-radius: 0px 0px 6px 6px;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.2s;
     /* padding-top: 10px; */
 }
 
@@ -21,7 +21,7 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .sidenav a:hover {
@@ -36,10 +36,10 @@
     margin-left: 50px;
 } */
 
-#main {
+/* #main {
     transition: margin-top .5s;
     padding: 16px;
-}
+} */
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
