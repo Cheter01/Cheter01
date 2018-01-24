@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  padding: 20px;
+  /* padding: 20px; */
   /* background-color: rgba(21, 21, 21, 0); */
   background: #151515 url("../images/footer_lodyas.png") 0 0;
   color: #eaeaea;
@@ -49,7 +49,7 @@ body {
 .page_box {
   width: 90%;
   max-width: 750px;
-	margin: 0 auto auto auto;
+	margin: 0 auto 20px auto;
   background: #151515 url("../images/bkg.png") 0 0;
   color: #eaeaea;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6), 0 0px 20px 0 rgba(0, 0, 0, 0.59);
@@ -388,6 +388,25 @@ button:focus,
 .btn:focus {
 	outline:0;
 }
+
+.btn-compleanno {
+	display: block;
+	background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+    border: 1px solid black;
+		margin: 5px auto;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    /* float: left; */
+		border-radius: 0px;
+		/* height: 30px; */
+		width: 100%;
+}
+
 
 /* Links
    a, a:hover, a:visited
