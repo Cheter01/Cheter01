@@ -1,4 +1,3 @@
-<?php include('visitor_counter.php') ?>;
 <!DOCTYPE html>
 <html>
     <head>
@@ -150,7 +149,7 @@
         </div>
         <!-- conta pagine -->
         <div id="counter">
-        <p> Page has been Visited <?php include('visitor_counter.txt'); ?> Times </p>
+        <img src="https://counter2.freecounter.ovh/private/contatoreaccessi.php?c=4e9h11ml2txp5q5xb7lc9g82brstdu9t">
         </div>
 
         <!-- ip -->
