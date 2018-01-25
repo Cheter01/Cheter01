@@ -1,4 +1,4 @@
-<?php include('visitor_counter.php');
+<?php include('visitor_counter.php') ?>;
 <!DOCTYPE html>
 <html>
     <head>
