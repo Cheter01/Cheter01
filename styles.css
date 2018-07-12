@@ -286,7 +286,24 @@ a[disabled]{
   width: 90%;
   /* position: relative; */
   margin: 5%;
-} 
+}
+
+ /*Image card */
+.demo-card-image.mdl-card {
+  padding-top: 100%;
+  width: 100%;
+  max-height: 256px;
+  background: url('./images/background.png') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 45px;
+  padding: 16px;
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  /*font-weight: 500;*/
+}
 
 /* --------------loader---------------- */
 
@@ -349,8 +366,8 @@ div#load_screen{
 
 @media (max-width: 1024px) {
   .android-logo-image {
-   height: 51px;
-    width: 252px;
+   height: 45px;
+    width: 246px;
     /* position: relative; */
    margin: 5%;
   }
