@@ -309,16 +309,25 @@ p{
 }
 
 #img-compl{
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: url("./images/Classe/Lorenzo_Chesi.jpg") center / cover;
+  margin: auto;
+}
+
+#FAB-perc{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -28px;
+  bottom: -200px;
 }
 
 /* --------------loader---------------- */
 
 div#load_screen{
   opacity: 1;
-  position: absolute;
+  position: fixed;
   z-index:9999;
   width: 100%;
   height: 100%;
