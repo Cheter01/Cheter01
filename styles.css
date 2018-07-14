@@ -312,6 +312,10 @@ p{
   width: 500px;
 }
 
+.mdl-card__actions{
+  text-align: center;
+}
+
 #img-compl{
   width: 100px;
   height: 100px;
@@ -321,13 +325,13 @@ p{
   margin: auto;
 }
 
-#FAB-perc{
+/* #FAB-perc{
   position: absolute;
   width: 100px;
   height: 100px;
   right: -28px;
   bottom: -200px;
-}
+} */
 
 /* --------------loader---------------- */
 

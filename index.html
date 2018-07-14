@@ -89,7 +89,7 @@
 			<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
 				<a href="#overview" class="mdl-layout__tab is-active">Overview</a>
 				<a disabled href="#features" class="mdl-layout__tab">Features</a>
-				<a href="#compleanni" class="mdl-layout__tab" onclick="myFunction()">Compleanni</a>
+				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni()">Compleanni</a>
 				<a disabled href="#features" class="mdl-layout__tab">Technology</a>
 				<a disabled href="#features" class="mdl-layout__tab">FAQ</a>
 
@@ -285,28 +285,22 @@
 							<div class="section__text mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet mdl-cell--2-col-phone">
 								<h5 mdl-color--accent>Info</h5>
 								<p>Data: <a id="date" calss=" mdl-color--accent">DD/MM/YY</a></p>
-								<p>Data: <a id="anni" calss=" mdl-color--accent">Age</a></p>
+								<p>Anni: <a id="anni" calss=" mdl-color--accent">Age</a></p>
 								<p>Sesso: <a id="sesso" calss="mdl-color--primary">M/F</a></p>
 								<p>E-mail: <a id="email" calss="mdl-color--primary">prova@gmail.com</a></p>
-
 							</div>
-							<!-- <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-								<div class="section__circle-container__circle mdl-color--primary"></div>
-							</div>
-							<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-								<h5>Lorem ipsum dolor sit amet</h5>
-								Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-							</div>
-							<div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-								<div class="section__circle-container__circle mdl-color--primary"></div>
-							</div>
-							<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-								<h5>Lorem ipsum dolor sit amet</h5>
-								Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-							</div> -->
 						</div>
 						<div class="mdl-card__actions">
 							<div id="p1" class="mdl-progress mdl-js-progress mdl-cell mdl-cell--12-col"></div>
+							<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" style="float:left;">
+  							<i class="material-icons" onclick="navigate_before()">navigate_before</i>
+							</button>
+							<div class="mdl-chip mdl-color--accent mdl-color-text--white">
+    						<span class="mdl-chip__text" id="giorni">Basic Chip</span>
+							</div>
+							<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" style="float:right;">
+  							<i class="material-icons" onclick="navigate_next()">navigate_next</i>
+							</button>
 						</div>
 					</div>
 					<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="show-dialog" type="button">
@@ -331,12 +325,33 @@
 							</div>
 						</div>
   			</dialog>
-
-					<!-- Colored FAB button with ripple -->
-					<button id="FAB-perc" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="myFunction()">
-						<i>90</i>
-					</button>
 				</section>
+				<div class="mdl-card mdl-cell mdl-cell--12-col">
+					<!-- tabella -->
+					<table class="mdl-data-table mdl-js-data-table mdl-cell--12 mdl-shadow--2dp">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Nome</th>
+								<th>Cognome</th>
+								<th>Data di nascita</th>
+								<th>Sesso</th>
+								<th>Email</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
 				<section class="section--footer mdl-color--white mdl-grid">
 					<div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
 						<div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
@@ -354,7 +369,7 @@
 					</div>
 				</section>
 			</div>
-			<footer class="mdl-mega-footer">
+			<!-- <footer class="mdl-mega-footer">
 				<div class="mdl-mega-footer--middle-section">
 					<div class="mdl-mega-footer--drop-down-section">
 						<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
@@ -406,7 +421,7 @@
 						<li><a href="#">Privacy and Terms</a></li>
 					</ul>
 				</div>
-			</footer>
+			</footer> -->
 		</main>
 	</div>
 	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
