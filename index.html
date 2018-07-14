@@ -89,12 +89,12 @@
 			<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
 				<a href="#overview" class="mdl-layout__tab is-active">Overview</a>
 				<a disabled href="#features" class="mdl-layout__tab">Features</a>
-				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni()">Compleanni</a>
+				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni(); tabella()">Compleanni</a>
 				<a disabled href="#features" class="mdl-layout__tab">Technology</a>
 				<a disabled href="#features" class="mdl-layout__tab">FAQ</a>
 
 				<!-- Add spacer, to align navigation to the right in desktop -->
-				<div class="android-header-spacer mdl-layout-spacer"></div>
+				<!-- <div class="android-header-spacer mdl-layout-spacer"></div>
 				<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
 					<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
 						<i class="material-icons">search</i>
@@ -102,7 +102,7 @@
 					<div class="mdl-textfield__expandable-holder">
 						<input class="mdl-textfield__input" type="text" id="search-field">
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 		</header>
@@ -277,12 +277,12 @@
 					<div class="mdl-card mdl-cell mdl-cell--12-col">
 						<div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 							<h4 class="mdl-cell mdl-cell--12-col" id="name">Name</h4>
-							<div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet mdl-cell--12-col-phone"  style="max-width:140px;">
+							<div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet mdl-cell--24-col-phone" style="max-width:140px;">
 								<div align="center" class="section__circle-container mdl-cell">
 									<div class="section__circle-container__circle mdl-color--accent section__circle--big" id="img-compl"></div>
 								</div>
 							</div>
-							<div class="section__text mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet mdl-cell--2-col-phone">
+							<div class="section__text mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet mdl-cell--5-col-phone">
 								<h5 mdl-color--accent>Info</h5>
 								<p>Data: <a id="date" calss=" mdl-color--accent">DD/MM/YY</a></p>
 								<p>Anni: <a id="anni" calss=" mdl-color--accent">Age</a></p>
@@ -290,10 +290,10 @@
 								<p>E-mail: <a id="email" calss="mdl-color--primary">prova@gmail.com</a></p>
 							</div>
 						</div>
-						<div class="mdl-card__actions">
+						<div class="mdl-card__actions" style="padding: 4px">
 							<div id="p1" class="mdl-progress mdl-js-progress mdl-cell mdl-cell--12-col"></div>
 							<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" style="float:left;">
-  							<i class="material-icons" onclick="navigate_before()">navigate_before</i>
+								<i class="material-icons" onclick="navigate_before()">navigate_before</i>
 							</button>
 							<div class="mdl-chip mdl-color--accent mdl-color-text--white">
     						<span class="mdl-chip__text" id="giorni">Basic Chip</span>
@@ -308,49 +308,41 @@
 					</button>
 					<!-- madal -->
 					<dialog class="mdl-dialog">
-    				<h4 class="mdl-dialog__title">Debug</h4>
-						<div class="mdl-dialog__content">
-	    				<div style="float: left; margin:8px;">
-								<p>Data: <a id="name-deb" calss=" mdl-color--accent">Name</a></p>
-								<p>Data: <a id="date-deb" calss=" mdl-color--accent">DD/MM/YY</a></p>
-								<p>Data: <a id="anni-deb" calss=" mdl-color--accent">Age</a></p>
-								<p>Sesso: <a id="sesso-deb" calss="mdl-color--primary">M/F</a></p>
-								<p>E-mail: <a id="email-deb" calss="mdl-color--primary">prova@gmail.com</a></p>
-	    				</div>
-							<div style="float: left; margin:8px;">
-								<p>FAB-perc: <a id="FAB-perc-deb" calss="mdl-color--primary">FAB-perc</a></p>
-								<p>numero_persone: <a id="numero_persone" calss="mdl-color--primary">numero_persone</a></p>
-								<p>compl1: <a id="compl1" calss="mdl-color--primary">compl1</a></p>
-								<p>other: <a id="other" calss="mdl-color--primary">other</a></p>
-							</div>
-						</div>
+							<!-- tabella -->
+
+							<!-- Expandable Textfield -->
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+									<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+										<i class="material-icons">search</i>
+									</label>
+									<div class="mdl-textfield__expandable-holder">
+										<input class="mdl-textfield__input" type="text" onkeyup="search()" id="sample6" autocomplete="off">
+										<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+									</div>
+								</div>
+
+								
+
+							</form>
+							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabella_persone">
+								<thead>
+									<tr style="background-color: rgba(96, 125, 139,0.1);">
+										<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent">Nome</th>
+										<th class="mdl-color-text--accent ">Cognome</th>
+										<th class="mdl-color-text--accent">Data di nascita</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr hidden>
+										<td>nome1</td>
+										<td>Cognome1</td>
+										<td>Giorno mese anno</td>
+									</tr>									
+								</tbody>
+							</table>
   			</dialog>
 				</section>
-				<div class="mdl-card mdl-cell mdl-cell--12-col">
-					<!-- tabella -->
-					<table class="mdl-data-table mdl-js-data-table mdl-cell--12 mdl-shadow--2dp">
-						<thead>
-							<tr>
-								<th class="mdl-data-table__cell--non-numeric">Nome</th>
-								<th>Cognome</th>
-								<th>Data di nascita</th>
-								<th>Sesso</th>
-								<th>Email</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-							</tr>
-							<tr>
-								<td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-							</tr>
-							<tr>
-								<td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
 
 				<section class="section--footer mdl-color--white mdl-grid">
 					<div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
@@ -428,5 +420,20 @@
 	<script src="js/loading.js"></script> <!-- Loader -->
 	<script src="js/compleanni.js"></script> <!-- Compleanni -->
 	<script src="js/main.js"></script>
+	<!-- cose da caricare -->
+	<div id="cose_da_caricare">
+		<img src="images/classe/Chiara_Di_Cesare.jpg" width="1" height="1" alt="Image 01" />
+   		<img src="images/classe/Dennis_Bonaguidi.jpg" width="1" height="1" alt="Image 02" />
+   		<img src="images/classe/Edison_Dantas.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Francesco_Del_Mondo.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Francesco_Frassi.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Francesco_Mottola.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Laura_Genua.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Leonardo_Prosperi.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Lorenzo_Chesi.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Martina_Gnudi.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Paolo_Lucchesi.jpg" width="1" height="1" alt="Image 03" />
+   		<img src="images/classe/Sara_Papaleo.jpg" width="1" height="1" alt="Image 03" />
+	</div>
 </body>
 </html>

@@ -9,91 +9,133 @@ var person = [
 {nome:"Paolo", cognome:"Lucchesi", giorno_su_anno:256, giorno_su_mese:13, mese:"Settembre", anno:2001, email:"lucchesipaolo22@yahoo.it", sesso: "Maschio"},
 {nome:"Sara", cognome:"Papaleo", giorno_su_anno:281, giorno_su_mese:8, mese:"Ottobre", anno:2001, email:"saraffaele@alice.it", sesso: "Femmina"},
 {nome:"Laura", cognome:"Genua", giorno_su_anno:313, giorno_su_mese:8, mese:"Novembre", anno:2001, email:"lauragenua01@gmail.com", sesso: "Femmina"},
-{nome:"Francesco", cognome:"Mottola", giorno_su_anno:320, giorno_su_mese:15, mese:"Novembre", anno:2001, email:"", sesso: "Maschio", sesso: "Femmina"},
+{nome:"Francesco", cognome:"Mottola", giorno_su_anno:320, giorno_su_mese:15, mese:"Novembre", anno:2001, email:"", sesso: "Maschio", sesso: "Maschio"},
 {nome:"Martina", cognome:"Gnudi", giorno_su_anno:320, giorno_su_mese:15, mese:"Novembre", anno:2000, email:"giulia_gnudi91@hotmail.it", sesso: "Femmina"},
 {nome:"Dennis", cognome:"Bonaguidi", giorno_su_anno:337, giorno_su_mese:3, mese:"Dicembre", anno:2001, email:"dennis.bonaguidi@gmail.com", sesso: "Maschio"},
-{nome:"Leonardo", cognome:"Prosperi", giorno_su_anno:347, giorno_su_mese:13, mese:"Dicembre", anno:2001, email:"", sesso: "Maschio", sesso: "Femmina"}];
-
+{nome:"Leonardo", cognome:"Prosperi", giorno_su_anno:347, giorno_su_mese:13, mese:"Dicembre", anno:2001, email:"", sesso: "Maschio", sesso: "Maschio"}];
 
 var value = 0;
 var skip = 0;
-function compleanni(){
+var numero_persone = person.length;
+
+function compleanni() {
+
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = now - start; //tempo dall'inizio dell'anno ad ora (in millisecondi)
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay); //Conversione dei millisecondi in giorni
+    numero_persone = person.length; //numero persone
+    var min = 365;
+    var recente;
+    var giorni;
+
+
+    for (var i = 0; i < numero_persone; i++) {
+
+        compl = person[i].giorno_su_anno;
+
+        if (day > compl) {
+            giorni = (365 - day) + compl;
+        } else {
+            giorni = compl - day;
+        }
+
+        if (min > giorni) {
+            min = giorni;
+            recente_mid = i;
+        }
+
+    }
+
+    recente = (Math.abs(recente_mid + skip)) % person.length;
+
+    if (day > person[recente].giorno_su_anno) {
+        val = ((day - person[recente].giorno_su_anno) / 365) * 100;
+        min = (365 - day) + person[recente].giorno_su_anno;
+        var anni = new Date().getFullYear() - person[recente].anno; //calcolo anni
+    } else {
+        val = ((day + 365 - person[recente].giorno_su_anno) / 365) * 100;
+        min = person[recente].giorno_su_anno - day;
+        var anni = new Date().getFullYear() - person[recente].anno - 1; //calcolo anni
+    }
+
+    document.getElementById("name").innerHTML = person[recente].nome + " " + person[recente].cognome;
+    document.getElementById("date").innerHTML = person[recente].giorno_su_mese + " " + String(person[recente].mese) + " " + String(person[recente].anno);
+    document.getElementById("sesso").innerHTML = person[recente].sesso;
+    document.getElementById("email").innerHTML = person[recente].email;
+    document.getElementById("anni").innerHTML = anni;
+    document.getElementById("img-compl").style.backgroundImage = "url(images/Classe/" + person[recente].nome + "_" + person[recente].cognome.replace(" ", "_") + ".jpg";
+    document.getElementById("giorni").innerHTML = min + " giorni rimanenti";
+    t = document.querySelector('#p1');
+    t.MaterialProgress.setProgress(val);
 
 
 
-
-	var now = new Date();
-	var start = new Date(now.getFullYear(), 0, 0);
-            var diff = now - start; //tempo dall'inizio dell'anno ad ora (in millisecondi)
-            var oneDay = 1000 * 60 * 60 * 24;
-            var day = Math.floor(diff / oneDay); //Conversione dei millisecondi in giorni
-            var numero_persone = person.length; //numero persone
-						var min = 365;
-						var recente;
-						var giorni;
+}
 
 
-            for(var i=0; i<numero_persone; i++){
+function tabella() {
 
-            		compl = person[i].giorno_su_anno;
+    // per la tabella
+    var tabella = document.getElementById("tabella_persone");
+    for (var p = 0; p<numero_persone; p++) {
 
-            		if (day > compl) {
-            			giorni = (365 - day) + compl;
-            		} else {
-            			giorni = compl - day;
-            		}
+        var row = tabella.insertRow(tabella.rows.length);
+     //    var header = tabella.createTHead();
+    	// var row_header = header.insertRow(0);
+    	
 
-								if(min > giorni){
-									min = giorni;
-									recente_mid = i;
-								}
-
-            }
-
-							recente = (Math.abs( recente_mid + skip)) % person.length;
-
-							if (day > person[recente].giorno_su_anno) {
-								val = ((day - person[recente].giorno_su_anno) / 365) * 100;
-								min = (365 - day) + person[recente].giorno_su_anno;
-								var anni = new Date().getFullYear() - person[recente].anno; //calcolo anni
-							} else {
-								val = ((day + 365 - person[recente].giorno_su_anno) / 365) * 100;
-								min = person[recente].giorno_su_anno - day;
-								var anni = new Date().getFullYear() - person[recente].anno - 1; //calcolo anni
-							}
-
-							document.getElementById("name").innerHTML = person[recente].nome + " " + person[recente].cognome;
-							document.getElementById("date").innerHTML = person[recente].giorno_su_mese + " " + String(person[recente].mese) + " " + String(person[recente].anno);
-							document.getElementById("sesso").innerHTML = person[recente].sesso;
-							document.getElementById("email").innerHTML = person[recente].email;
-							document.getElementById("anni").innerHTML = anni;
-            	document.getElementById("img-compl").style.backgroundImage = "url(images/Classe/"+person[recente].nome+"_"+person[recente].cognome.replace(" ","_")+".jpg";
-            	document.getElementById("giorni").innerHTML = min + " giorni rimanenti";
-
-							// DEBUG
-							document.getElementById("name-deb").innerHTML = person[recente].nome + " " + person[recente].cognome;
-							document.getElementById("date-deb").innerHTML = person[recente].giorno_su_mese + " " + String(person[recente].mese) + " " + String(person[recente].anno);
-							document.getElementById("sesso-deb").innerHTML = person[recente].sesso;
-							document.getElementById("email-deb").innerHTML = person[recente].email;
-							document.getElementById("anni-deb").innerHTML = anni;
-							document.getElementById("FAB-perc-deb").innerHTML = min;
-							document.getElementById("numero_persone").innerHTML = numero_persone;
-							document.getElementById("compl1").innerHTML = compl;
-							document.getElementById("other").innerHTML = recente;
-
-
-							t = document.querySelector('#p1');
-							t.MaterialProgress.setProgress(val);
+        for (var c = 0; c < 3; c++) {
+            // if (p == numero_persone) {
+            // 	var cell = row_header.insertCell(c);
+            //     switch (c) {
+            //         case 0:
+            //             cell.innerHTML = "Nome";
+            //             cell.classList.add("mdl-data-table__cell--non-numeric");
+            //             break;
+            //         case 1:
+            //             cell.innerHTML = "Cognome";
+            //             break;
+            //         case 2:
+            //             cell.innerHTML = "Data di nascita";
+            //             break;
+            //         default:
+            //             "ERROR";
+            //     }
+            // } else {
+            	var cell = row.insertCell(c);
+                switch (c) {
+                    case 0:
+                        cell.innerHTML = person[p].nome;
+                        cell.classList.add("mdl-data-table__cell--non-numeric");
+                        break;
+                    case 1:
+                        cell.innerHTML = person[p].cognome;
+                        break;
+                    case 2:
+                        cell.innerHTML = person[p].giorno_su_mese + " " + person[p].mese + " " + person[p].anno;
+                        break;
+                    default:
+                        "ERROR";
+                }
             // }
-        };
+        }
+    }
 
-				function navigate_before(){
-					skip--;
-					compleanni();
-					// console.log(skip);
-				};
 
-				function navigate_next(){
-					skip++;
-					compleanni();
-				}
+
+
+
+};
+
+function navigate_before() {
+    skip--;
+    compleanni();
+    // console.log(skip);
+};
+
+function navigate_next() {
+    skip++;
+    compleanni();
+}
