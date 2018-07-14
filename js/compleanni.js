@@ -27,12 +27,16 @@ function myFunction(){
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay); //Conversione dei millisecondi in giorni
             var numero_persone = person.length; //numero persone
+						var compl1;
+						var compl2;
 
-            for(i=1; i==numero_persone; i++){
+            // for(i=0; i==numero_persone; i++){
 
             	do{
-            		var compl1 = parseInt(person[i].giorno_su_anno);
-            		var compl2 = parseInt(person[i+1].giorno_su_anno);
+								var i=0;
+
+            		compl1 = person[i].giorno_su_anno;
+            		compl2 = person[i+1].giorno_su_anno;
 
             		if (day > compl1) {
             			var value = ((day - compl1) / 365) * 100;
@@ -43,8 +47,9 @@ function myFunction(){
             			var giorni1 = compl1 - day;
             			var giorni2 = compl2 - day;
             		}
+								i++;
             	}while (giorni1<giorni2);
-            }
+            // }
             // if (giorni <= 0) {
             //   document.getElementById("compleanno").innerHTML = "Auguri " + nome +", per i tuoi " + anni  + " anni!";
             //   document.getElementById("myimg").src = "images/cake.png";
@@ -61,6 +66,18 @@ function myFunction(){
 							document.getElementById("anni").innerHTML = anni;
             	document.getElementById("img-compl").style.backgroundImage = "url(images/Classe/"+person[i].nome+"_"+person[i].cognome+".jpg";
             	document.getElementById("FAB-perc").innerHTML = giorni1;
+
+							// DEBUG
+							document.getElementById("name-deb").innerHTML = person[i].nome + " " + person[i].cognome;
+							document.getElementById("date-deb").innerHTML = person[i].giorno_su_mese + " " + String(person[i].mese) + " " + String(person[i].anno);
+							document.getElementById("sesso-deb").innerHTML = person[i].sesso;
+							document.getElementById("email-deb").innerHTML = person[i].email;
+							document.getElementById("anni-deb").innerHTML = anni;
+							document.getElementById("FAB-perc-deb").innerHTML = giorni1;
+							document.getElementById("numero_persone").innerHTML = numero_persone;
+							document.getElementById("compl1").innerHTML = compl1;
+							document.getElementById("other").innerHTML = i;
+
             // }
         };
 

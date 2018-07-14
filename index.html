@@ -309,14 +309,29 @@
 							<div id="p1" class="mdl-progress mdl-js-progress mdl-cell mdl-cell--12-col"></div>
 						</div>
 					</div>
-					<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-						<i class="material-icons">more_vert</i>
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="show-dialog" type="button">
+						<i class="material-icons">info</i>
 					</button>
-					<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-						<li class="mdl-menu__item">Lorem</li>
-						<li class="mdl-menu__item" disabled>Ipsum</li>
-						<li class="mdl-menu__item">Dolor</li>
-					</ul>
+					<!-- madal -->
+					<dialog class="mdl-dialog">
+    				<h4 class="mdl-dialog__title">Debug</h4>
+						<div class="mdl-dialog__content">
+	    				<div style="float: left; margin:8px;">
+								<p>Data: <a id="name-deb" calss=" mdl-color--accent">Name</a></p>
+								<p>Data: <a id="date-deb" calss=" mdl-color--accent">DD/MM/YY</a></p>
+								<p>Data: <a id="anni-deb" calss=" mdl-color--accent">Age</a></p>
+								<p>Sesso: <a id="sesso-deb" calss="mdl-color--primary">M/F</a></p>
+								<p>E-mail: <a id="email-deb" calss="mdl-color--primary">prova@gmail.com</a></p>
+	    				</div>
+							<div style="float: left; margin:8px;">
+								<p>FAB-perc: <a id="FAB-perc-deb" calss="mdl-color--primary">FAB-perc</a></p>
+								<p>numero_persone: <a id="numero_persone" calss="mdl-color--primary">numero_persone</a></p>
+								<p>compl1: <a id="compl1" calss="mdl-color--primary">compl1</a></p>
+								<p>other: <a id="other" calss="mdl-color--primary">other</a></p>
+							</div>
+						</div>
+  			</dialog>
+
 					<!-- Colored FAB button with ripple -->
 					<button id="FAB-perc" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="myFunction()">
 						<i>90</i>
@@ -395,7 +410,8 @@
 		</main>
 	</div>
 	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	<!-- <script src="js/loading.js"></script> <!-- Loader --> -->
+	<script src="js/loading.js"></script> <!-- Loader -->
 	<script src="js/compleanni.js"></script> <!-- Compleanni -->
+	<script src="js/main.js"></script>
 </body>
 </html>
