@@ -315,7 +315,9 @@ p{
 #img-compl{
   width: 100px;
   height: 100px;
-  background: url("./images/Classe/Lorenzo_Chesi.jpg") center / cover;
+  /* background: url("./images/Classe/Lorenzo_Chesi.jpg") center / cover; */
+  background: center / cover;
+
   margin: auto;
 }
 
