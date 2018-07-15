@@ -61,7 +61,7 @@
 }
 </style>
 </head>
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700" onload="tabella()">
+<body class="mdl-demo mdl-color-text--grey-700" onload="background(); tabella()">
 
 	<!-- loader -->
 	<div class="mdl-color--primary" id="load_screen">
@@ -87,9 +87,9 @@
 			<div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
 
 			<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-				<a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+				<a href="#overview" class="mdl-layout__tab is-active" onclick="background()">Overview</a>
 				<a disabled href="#features" class="mdl-layout__tab">Features</a>
-				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni_onload()">Compleanni</a>
+				<a href="#compleanni" class="mdl-layout__tab" onclick="background(); compleanni_onload()">Compleanni</a>
 				<a disabled href="#features" class="mdl-layout__tab">Technology</a>
 				<a disabled href="#features" class="mdl-layout__tab">FAQ</a>
 
@@ -118,7 +118,7 @@
         	</nav>
       	</div>
 
-		<main class="mdl-layout__content">
+		<main class="mdl-layout__content" id="main">
 			<div class="mdl-layout__tab-panel is-active" id="overview">
 				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 					<header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
@@ -217,7 +217,7 @@
 					</div>
 				</section>
 			</div>
-			<div class="mdl-layout__tab-panel mdl-color--grey-100" id="features">
+			<div class="mdl-layout__tab-panel" id="features">
 				<section class="section--center mdl-grid mdl-grid--no-spacing">
 					<div class="mdl-cell mdl-cell--12-col">
 						<h4>Features</h4>
@@ -272,7 +272,7 @@
 					</div>
 				</section>
 			</div>
-			<div class="mdl-layout__tab-panel mdl-color--grey-100" id="compleanni">
+			<div class="mdl-layout__tab-panel" id="compleanni">
 				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 					<div class="mdl-card mdl-cell mdl-cell--12-col">
 						<div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
@@ -308,55 +308,75 @@
 					</button>
 					<!-- madal -->
 					<dialog class="mdl-dialog">
-							<!-- tabella -->
+						<!-- tabella -->
 
-							<!-- chiusura tabella -->
-							<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-color-text--accent" id="closing_button">
-								<i class="material-icons">close</i>
-							</button>
+						<!-- chiusura tabella -->
+						<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-color-text--accent" id="closing_button">
+							<i class="material-icons">close</i>
+						</button>
 
-							<!-- Expandable Textfield -->
-							<form action="#">
-								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-									<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
-										<i class="material-icons">search</i>
-									</label>
-									<div class="mdl-textfield__expandable-holder">
-										<input class="mdl-textfield__input" type="text" onkeyup="search()" id="sample6" autocomplete="off">
-										<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
-									</div>
-								</div>								
+						<!-- Expandable Textfield -->
+						<form action="#">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+								<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+									<i class="material-icons">search</i>
+								</label>
+								<div class="mdl-textfield__expandable-holder">
+									<input class="mdl-textfield__input" type="text" onkeyup="search()" id="sample6" autocomplete="off">
+									<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+								</div>
+							</div>								
 
-							</form>
-							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabella_persone">
-								<thead>
-									<tr style="background-color: rgba(96, 125, 139,0.1);">
-										<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent">
-											<button class="mdl-button mdl-js-button mdl-data-table__cell--non-numeric mdl-color-text--accent mdl-js-ripple-effect" onclick="by_name()" id="filter_button">
-  												Nome
-											</button>
-										</th>
-										<th class="mdl-color-text--accent">
-											<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_surname()" id="filter_button">
-  												Cognome
-											</button>
-										</th>
-										<th class="mdl-color-text--accent">
-											<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_date()" id="filter_button">
-  												Data di nascita
-											</button>
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr hidden>
-										<td>nome1</td>
-										<td>Cognome1</td>
-										<td>Giorno mese anno</td>
-									</tr>
-								</tbody>
-							</table>
-  			</dialog>
+						</form>
+						<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabella_persone">
+							<thead>
+								<tr style="background-color: rgba(96, 125, 139,0.1);">
+									<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent">
+										<button class="mdl-button mdl-js-button mdl-data-table__cell--non-numeric mdl-color-text--accent mdl-js-ripple-effect" onclick="by_name()" id="filter_button">
+											Nome
+										</button>
+									</th>
+									<th class="mdl-color-text--accent">
+										<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_surname()" id="filter_button">
+											Cognome
+										</button>
+									</th>
+									<th class="mdl-color-text--accent">
+										<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_date()" id="filter_button">
+											Data di nascita
+										</button>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr hidden>
+									<td>nome1</td>
+									<td>Cognome1</td>
+									<td>Giorno mese anno</td>
+								</tr>
+							</tbody>
+						</table>
+					</dialog>					
+				</section>
+
+				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+					<div class="mdl-card mdl-cell mdl-cell--12-col">
+						<div class="mdl-card__supporting-text">
+							<h4>Cose a caso</h4>
+							### ##### #######  ######### ####### ## # ####### # ##### ## ##### ######## ######### ###### ### ### #### ###### ###### ### #  ############ # # # ####### ####### ######  ######### ##### ###### ###### ### ###### #### #### #### ## ####### ######## ##### #### ##### ####### ###### ###### #### ### ### ## # # ###
+						</div>
+						<div class="mdl-card__actions">
+							<a href="#" class="mdl-button">Pulsante che non fà nulla</a>
+						</div>
+					</div>
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn4">
+						<i class="material-icons">more_vert</i>
+					</button>
+					<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn4">
+						<li class="mdl-menu__item">Lorem</li>
+						<li class="mdl-menu__item" disabled>Ipsum</li>
+						<li class="mdl-menu__item">Dolor</li>
+					</ul>
 				</section>
 
 				<section class="section--footer mdl-color--white mdl-grid">
@@ -449,6 +469,17 @@
    		<img src="images/Classe/Martina_Gnudi.jpg" width="1" height="1" alt="Image 03" />
    		<img src="images/Classe/Paolo_Lucchesi.jpg" width="1" height="1" alt="Image 03" />
    		<img src="images/Classe/Sara_Papaleo.jpg" width="1" height="1" alt="Image 03" />
+
+   		<img src="images/background/background_0.svg" width="1" height="1"/>
+   		<img src="images/background/background_1.svg" width="1" height="1"/>
+   		<img src="images/background/background_2.svg" width="1" height="1"/>
+   		<img src="images/background/background_3.svg" width="1" height="1"/>
+   		<img src="images/background/background_4.svg" width="1" height="1"/>
+   		<img src="images/background/background_5.svg" width="1" height="1"/>
+   		<img src="images/background/background_6.svg" width="1" height="1"/>
+   		<img src="images/background/background_7.svg" width="1" height="1"/>
+   		<img src="images/background/background_8.svg" width="1" height="1"/>
+   		<img src="images/background/background_9.svg" width="1" height="1"/>
 	</div>
 </body>
 </html>

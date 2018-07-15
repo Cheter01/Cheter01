@@ -20,6 +20,10 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
+  background: url("./images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 a[disabled]{
   pointer-events: none;
@@ -32,6 +36,7 @@ p{
 
 .mdl-demo .mdl-layout__header-row {
   padding-left: 40px;
+  position: static;
 }
 .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
   font-size: inherit;
@@ -67,6 +72,9 @@ p{
 .mdl-demo main > .mdl-layout__tab-panel {
   padding: 8px;
   padding-top: 48px;
+}
+.mdl-layout__container{
+    position: static;
 }
 .mdl-demo .mdl-card {
   height: auto;
