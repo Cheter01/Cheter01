@@ -17,20 +17,20 @@ var person = [
 var value = 0;
 var skip = 0;
 var numero_persone = person.length;
-
-function compleanni() {
-
-    var now = new Date();
-    var start = new Date(now.getFullYear(), 0, 0);
-    var diff = now - start; //tempo dall'inizio dell'anno ad ora (in millisecondi)
-    var oneDay = 1000 * 60 * 60 * 24;
-    var day = Math.floor(diff / oneDay); //Conversione dei millisecondi in giorni
-    numero_persone = person.length; //numero persone
-    var min = 365;
-    var recente;
-    var giorni;
+var recente;
+var now = new Date();
+var start = new Date(now.getFullYear(), 0, 0);
+var diff = now - start; //tempo dall'inizio dell'anno ad ora (in millisecondi)
+var oneDay = 1000 * 60 * 60 * 24;
+var day = Math.floor(diff / oneDay); //Conversione dei millisecondi in giorni
+numero_persone = person.length; //numero persone
+var min = 365;
+var giorni;
 
 
+// funzione dei compleanni che calcola solo il compleanno più vicino
+function compleanni_onload(){
+	
     for (var i = 0; i < numero_persone; i++) {
 
         compl = person[i].giorno_su_anno;
@@ -48,7 +48,13 @@ function compleanni() {
 
     }
 
-    recente = (Math.abs(recente_mid + skip)) % person.length;
+    recente = Math.abs(recente_mid + (999999*person.length-skip)) % person.length;
+    compleanni();
+}
+
+// funzione dei compleanni che setta nella pagina i cari elementi
+
+function compleanni() {
 
     if (day > person[recente].giorno_su_anno) {
         val = ((day - person[recente].giorno_su_anno) / 365) * 100;
@@ -75,6 +81,16 @@ function compleanni() {
 }
 
 
+function navigate_before() {
+    skip--;
+    compleanni_onload();
+};
+
+function navigate_next() {
+    skip++;
+    compleanni_onload();
+}
+
 function tabella() {
 
     // per la tabella
@@ -82,28 +98,18 @@ function tabella() {
     for (var p = 0; p<numero_persone; p++) {
 
         var row = tabella.insertRow(tabella.rows.length);
-     //    var header = tabella.createTHead();
-    	// var row_header = header.insertRow(0);
-    	
+
+        // funzionalità per visualizzare sul form dei compleanni il profilo selezionato
+    	row.id =p;	
+    	row.onclick = function set_by_table(){
+    		recente = this.getAttribute('id');
+    		skip = recente - recente_mid;
+    		skip = Math.abs(skip);
+    		compleanni();
+    		dialog.close();   //si trova nel file main.js
+    	};
 
         for (var c = 0; c < 3; c++) {
-            // if (p == numero_persone) {
-            // 	var cell = row_header.insertCell(c);
-            //     switch (c) {
-            //         case 0:
-            //             cell.innerHTML = "Nome";
-            //             cell.classList.add("mdl-data-table__cell--non-numeric");
-            //             break;
-            //         case 1:
-            //             cell.innerHTML = "Cognome";
-            //             break;
-            //         case 2:
-            //             cell.innerHTML = "Data di nascita";
-            //             break;
-            //         default:
-            //             "ERROR";
-            //     }
-            // } else {
             	var cell = row.insertCell(c);
                 switch (c) {
                     case 0:
@@ -128,14 +134,3 @@ function tabella() {
 
 
 };
-
-function navigate_before() {
-    skip--;
-    compleanni();
-    // console.log(skip);
-};
-
-function navigate_next() {
-    skip++;
-    compleanni();
-}

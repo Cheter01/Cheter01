@@ -61,7 +61,7 @@
 }
 </style>
 </head>
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700">
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700" onload="tabella()">
 
 	<!-- loader -->
 	<div class="mdl-color--primary" id="load_screen">
@@ -89,7 +89,7 @@
 			<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
 				<a href="#overview" class="mdl-layout__tab is-active">Overview</a>
 				<a disabled href="#features" class="mdl-layout__tab">Features</a>
-				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni(); tabella()">Compleanni</a>
+				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni_onload()">Compleanni</a>
 				<a disabled href="#features" class="mdl-layout__tab">Technology</a>
 				<a disabled href="#features" class="mdl-layout__tab">FAQ</a>
 
@@ -310,6 +310,11 @@
 					<dialog class="mdl-dialog">
 							<!-- tabella -->
 
+							<!-- chiusura tabella -->
+							<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-color-text--accent" id="closing_button">
+								<i class="material-icons">close</i>
+							</button>
+
 							<!-- Expandable Textfield -->
 							<form action="#">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
@@ -320,17 +325,27 @@
 										<input class="mdl-textfield__input" type="text" onkeyup="search()" id="sample6" autocomplete="off">
 										<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
 									</div>
-								</div>
-
-
+								</div>								
 
 							</form>
 							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabella_persone">
 								<thead>
 									<tr style="background-color: rgba(96, 125, 139,0.1);">
-										<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent">Nome</th>
-										<th class="mdl-color-text--accent ">Cognome</th>
-										<th class="mdl-color-text--accent">Data di nascita</th>
+										<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent">
+											<button class="mdl-button mdl-js-button mdl-data-table__cell--non-numeric mdl-color-text--accent mdl-js-ripple-effect" onclick="by_name()" id="filter_button">
+  												Nome
+											</button>
+										</th>
+										<th class="mdl-color-text--accent">
+											<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_surname()" id="filter_button">
+  												Cognome
+											</button>
+										</th>
+										<th class="mdl-color-text--accent">
+											<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_date()" id="filter_button">
+  												Data di nascita
+											</button>
+										</th>
 									</tr>
 								</thead>
 								<tbody>
