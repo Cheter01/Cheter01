@@ -61,15 +61,15 @@ function search() {
 
 function background(){
 
-    var id = ["overview", "features", "compleanni"];
+    // var id = ["overview", "features", "compleanni"];
 
     var rand = Math.floor(Math.random() * 10);   // returns a random integer from 0 to 9
     var background = "#ffffff url('./images/background/background_"+rand+".svg') no-repeat scroll center";
 
 
-    for(var k=0; k<id.length; k++){
-        document.getElementById(id[k]).style.background = background;
-        document.getElementById(id[k]).style.backgroundSize = "cover";
+    // for(var k=0; k<id.length; k++){
+        document.body.style.background = background;
+        document.body.style.backgroundSize = "cover";
         // console.log(background);
-    }
+    // }
 }
