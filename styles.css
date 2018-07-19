@@ -34,8 +34,13 @@ p{
   margin:0px;
 }
 
-main{
-  
+dialog{
+  border-radius: 15px;
+}
+
+#mdl-data-table{
+  border-radius: 15px;
+  margin: 0;
 }
 
 .mdl-layout__obfuscator{
