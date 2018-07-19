@@ -6,6 +6,7 @@ var person = [
 {nome:"Francesco", cognome:"Del Mondo", giorno_su_anno:138, giorno_su_mese:18, mese:"Maggio", anno:2001, email:"Francethebest2001@gmail.com", sesso: "Maschio"},
 {nome:"Chiara", cognome:"Di Cesare", giorno_su_anno:166, giorno_su_mese:15, mese:"Giugno", anno:2001, email:"chiaradicesare001@gmail.com", sesso: "Femmina"},
 {nome:"Francesco", cognome:"Frassi", giorno_su_anno:172, giorno_su_mese:21, mese:"Giugno", anno:2001, email:"Skynetfrafra.FF@gmail.com", sesso: "Maschio"},
+{nome:"Eni", cognome:"Shehu", giorno_su_anno:179, giorno_su_mese:28, mese:"Giugno", anno:2001, email:"eni.shehu13@gmail.com", sesso: "Maschio"},
 {nome:"Paolo", cognome:"Lucchesi", giorno_su_anno:256, giorno_su_mese:13, mese:"Settembre", anno:2001, email:"lucchesipaolo22@yahoo.it", sesso: "Maschio"},
 {nome:"Sara", cognome:"Papaleo", giorno_su_anno:281, giorno_su_mese:8, mese:"Ottobre", anno:2001, email:"saraffaele@alice.it", sesso: "Femmina"},
 {nome:"Laura", cognome:"Genua", giorno_su_anno:313, giorno_su_mese:8, mese:"Novembre", anno:2001, email:"lauragenua01@gmail.com", sesso: "Femmina"},
@@ -82,12 +83,12 @@ function compleanni() {
 
 
 function navigate_before() {
-    skip--;
+    skip++;
     compleanni_onload();
 };
 
 function navigate_next() {
-    skip++;
+    skip--;
     compleanni_onload();
 }
 
