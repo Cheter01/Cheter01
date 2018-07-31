@@ -38,12 +38,17 @@ dialog{
   border-radius: 15px;
 }
 
+main {
+  height: 100%;
+}
+
 #mdl-data-table{
   border-radius: 15px;
   margin: 0;
 }
 
 .mdl-layout__obfuscator{
+  position: fixed;
   height: 100%;
 }
 
@@ -277,8 +282,8 @@ dialog{
 
 .android-drawer {
   border-right: none;
-
-  /*height: calc(100% + 30em);*/
+  position: fixed;
+  height: 100%;
 }
 
 .android-drawer-separator {
@@ -349,49 +354,6 @@ dialog{
 .mdl-radio{
   float: right;
   margin: 5px;
-}
-
-/*-------------------------------orologio-------------------*/
-#clock-rim {
-  display: block;
-  position: relative;
-  width: 600px;
-  height: 600px;
-  /*background: linear-gradient(gray, black);*/
-  /*background-color: black;*/
-  border-radius: 50%;
-  margin: auto;
-  background: url("images/orologio/2.png") no-repeat scroll center;
-  background-size: 70%;
-  /*background-color: black;*/
-}
-
-#second_clock{
-  display: block;
-  position: relative;  
-  width: 260px;
-  height: 260px;
-  /*top: 50%;
-  transform: translateY(-50%);*/
-  margin: auto;
-  border-radius: 50%;
-  background: url("images/orologio/1.png") no-repeat scroll center;
-  background-size: 70%;
-  /*background-color: black;*/
-}
-
-#fisrt_clock{
-  display: block;
-  position: relative;  
-  width: 260px;
-  height: 260px;
-  /*top: 50%;
-  transform: translateY(-50%);*/
-  margin: auto;
-  border-radius: 50%;
-  background: url("images/orologio/1.png") no-repeat scroll center;
-  background-size: 70%;
-  /*background-color: black;*/
 }
 
 div#cose_da_caricare{
