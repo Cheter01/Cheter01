@@ -57,7 +57,7 @@ function search() {
 }
 
 
-// background per il body
+// background per il body ---------------------------------------
 
 function background(){
 
@@ -73,3 +73,26 @@ function background(){
         // console.log(background);
     // }
 }
+
+// snackbar like and unlike -----------------------------------------
+
+(function() {
+  'use strict';
+  var like_snackbarContainer = document.querySelector('#like_snackbar');
+  var like_showToastButton = document.querySelector('#like-show-toast');
+  var unlike_snackbarContainer = document.querySelector('#unlike_snackbar');
+  var unlike_showToastButton = document.querySelector('#unlike-show-toast');
+
+  like_showToastButton.addEventListener('click', function() {
+    'use strict';
+    var data = {message: 'Grazie!! 😄'};
+    like_snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+
+  unlike_showToastButton.addEventListener('click', function() {
+    'use strict';
+    var data = {message: 'Mi dispiace... 😥'};
+    unlike_snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+
+}());
