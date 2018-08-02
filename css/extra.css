@@ -25,6 +25,7 @@ div#alchemy {
   	margin-top: 0%;
   	animation-name: bottom_opening;
     animation-duration: 5s;
+    float: left;
     /*margin-bottom: 50%;*/
 }
 
@@ -40,7 +41,7 @@ div#alchemy_circle {
 }
 
 @keyframes bottom_opening {
-    0%    {filter: saturate(0); height: 1%; margin-top: 10%;}
+    0%    {filter: saturate(0); height: 1%; margin-top: 10%; transform: rotate(0deg);}
     20%   {filter: saturate(0);}
 	/*10%   {background-color: red;}
 	30%   {background-color: red;}
@@ -49,8 +50,8 @@ div#alchemy_circle {
     70%   {background-color: red;}
     80%   {background-color: red;}
     90%   {background-color: red;}*/
-    50%   {height:150%;}
-    100%  {filter: saturate(1); height:85%; margin-top:0%;}
+    50%   {height:150%;  transform: rotate(420deg);}
+    100%  {filter: saturate(1); height:85%; margin-top:0%; transform: translateX(-50%);}
 }
 
 @keyframes levitation {
