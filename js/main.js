@@ -87,12 +87,31 @@ function background(){
     'use strict';
     var data = {message: 'Grazie!! 😄'};
     like_snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    var valutazione = "like";
+    saveToFirebase(valutazione);
   });
 
   unlike_showToastButton.addEventListener('click', function() {
     'use strict';
     var data = {message: 'Mi dispiace... 😥'};
     unlike_snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    var valutazione = "unlike";
+    saveToFirebase(valutazione);
   });
 
 }());
+
+
+function saveToFirebase(valutazione) {
+    var Object = {
+        Valutazione: valutazione
+    };
+
+    firebase.database().ref('recenzioni').push().set(Object)
+        .then(function(snapshot) {
+            success(); // some success method
+        }, function(error) {
+            console.log('error' + error);
+            error(); // some error method
+        });
+}
