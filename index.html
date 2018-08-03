@@ -63,7 +63,7 @@
 }
 </style>
 </head>
-<body class="mdl-demo mdl-color-text--grey-700" onload="background(); tabella()">
+<body class="mdl-demo mdl-color-text--grey-700" onload="background(); tabella(); saveToFirebase('null')">
 
 	<!-- loader -->
 	<div id="load_screen">
@@ -90,7 +90,7 @@
 				<a href="#overview" class="mdl-layout__tab is-active">Overview</a>
 				<a href="#alchemy" class="mdl-layout__tab">Alchemy</a>
 				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni_onload()">Compleanni</a>
-				<a disabled href="#features" class="mdl-layout__tab">Technology</a>
+				<a href="#value" class="mdl-layout__tab">Value</a>
 				<a disabled href="#features" class="mdl-layout__tab">FAQ</a>
 			</div>
 		</header>
@@ -264,6 +264,28 @@
 				<section class="section--footer mdl-color--white mdl-grid" hidden="">
 				</section>
 			</div>
+			<div class="mdl-layout__tab-panel" id="value">
+				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+					<div class="mdl-card mdl-cell mdl-cell--12-col">
+						<div class="mdl-card__supporting-text">
+							<h3>Valutazioni</h3>
+							<p class="mdl-typography--headline">
+								<a id="value_like" class="mdl-color-text--primary-dark"></a>
+								<a class="mdl-color-text--accent">POSITIVE</a>
+							</p>
+							<p class="mdl-typography--headline">
+								<a id="value_dislike" class="mdl-color-text--primary-dark"></a>
+								<a class="mdl-color-text--accent">NEGATIVE</a>
+							</p>
+						</div>
+						<div class="mdl-card__actions">
+							<a href="#" class="mdl-button">Pulsante che non fà nulla</a>
+						</div>
+					</div>
+				</section>
+				<section class="section--footer mdl-color--white mdl-grid" hidden="">
+				</section>
+			</div>
 		</main>
 	</div>
 
@@ -324,6 +346,6 @@
   };
   firebase.initializeApp(config);
 </script>
-	
+
 </body>
 </html>

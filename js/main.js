@@ -87,7 +87,7 @@ function background(){
     'use strict';
     var data = {message: 'Grazie!! 😄'};
     like_snackbarContainer.MaterialSnackbar.showSnackbar(data);
-    var valutazione = "like";
+    var valutazione = "positiva";
     saveToFirebase(valutazione);
   });
 
@@ -95,7 +95,7 @@ function background(){
     'use strict';
     var data = {message: 'Mi dispiace... 😥'};
     unlike_snackbarContainer.MaterialSnackbar.showSnackbar(data);
-    var valutazione = "unlike";
+    var valutazione = "negativa";
     saveToFirebase(valutazione);
   });
 
@@ -103,15 +103,77 @@ function background(){
 
 
 function saveToFirebase(valutazione) {
-    var Object = {
-        Valutazione: valutazione
-    };
+  var recenzioniFB = firebase.database().ref('recenzioni');
+  var userFB = firebase.database().ref('user');
+  // var user;
 
-    firebase.database().ref('recenzioni').push().set(Object)
-        .then(function(snapshot) {
-            success(); // some success method
-        }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
-        });
+  // getUserIP(function(ip){
+  //   var utente = {
+  //     utente: ip
+  //   };
+  //   // var user = userFB.set(utente);
+  //   userFB.child('utente').on('value', function (user){
+  //     if(user.exists() == ip){                // TODO: dafare
+
+  //     }else{
+
+        if(valutazione != 'null'){
+          // if(userFB.on())
+          recenzioniFB.child(valutazione).transaction(function(currentValue){return (currentValue||0) + 1})
+          .then(function(snapshot) {
+                    console.log("success");
+                  }, function(error) {
+                    // console.log('error' + error);
+                  });
+          // userFB.set(utente);
+        }
+  //     }
+  //   });
+  // })
+
+
+      recenzioniFB.child('positiva').on('value', function(value)
+      {document.getElementById("value_like").innerHTML = (value.val()||0) + " valutazioni ";});
+
+      recenzioniFB.child('negativa').on('value', function(value)
+      {document.getElementById("value_dislike").innerHTML = (value.val()||0) + " valutazioni ";});
 }
+
+// ip ------------------------------------------------------------
+
+function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
+    //compatibility for firefox and chrome
+    var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+    var pc = new myPeerConnection({
+        iceServers: []
+    }),
+    noop = function() {},
+    localIPs = {},
+    ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g,
+    key;
+
+    function iterateIP(ip) {
+        if (!localIPs[ip]) onNewIP(ip);
+        localIPs[ip] = true;
+    }
+
+     //create a bogus data channel
+    pc.createDataChannel("");
+
+    // create offer and set local description
+    pc.createOffer(function(sdp) {
+        sdp.sdp.split('\n').forEach(function(line) {
+            if (line.indexOf('candidate') < 0) return;
+            line.match(ipRegex).forEach(iterateIP);
+        });
+
+        pc.setLocalDescription(sdp, noop, noop);
+    }, noop);
+
+    //listen for candidate events
+    pc.onicecandidate = function(ice) {
+        if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
+        ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
+    };
+}
+
