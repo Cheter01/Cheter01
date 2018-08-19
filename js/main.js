@@ -177,3 +177,15 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
     };
 }
 
+
+//conversione testo degli spazi in %20 e in %s
+
+var percS = document.querySelector('#percS');
+percS.addEventListener('input', function() {
+
+    var percS = document.getElementById("percS");
+    var Pperc = document.getElementById("Pperc");
+    var txtPercS = percS.value;
+    Pperc.innerHTML = txtPercS.replace(/ /g, "%s");
+  }
+);

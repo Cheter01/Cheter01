@@ -131,6 +131,18 @@ div#alchemy_circle {
   left: 8px;
 }
 
+.mdl-textfield{
+  width: 100%;
+}
+
+#Pperc{
+  /*width: 50%; */
+  /*float:right;*/
+  /*height: 100%;*/
+  word-wrap: break-word;
+  line-height: 1;
+}
+
 @media (max-width: 470px) {
   .mdl-typography--display-3{
   font-size:10vw;

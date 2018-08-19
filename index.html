@@ -91,7 +91,7 @@
 				<a href="#alchemy" class="mdl-layout__tab">Alchemy</a>
 				<a href="#compleanni" class="mdl-layout__tab" onclick="compleanni_onload()">Compleanni</a>
 				<a href="#value" class="mdl-layout__tab">Value</a>
-				<a disabled href="#features" class="mdl-layout__tab">FAQ</a>
+				<a href="#text" class="mdl-layout__tab">Text</a>
 			</div>
 		</header>
 
@@ -241,7 +241,7 @@
 					</dialog>					
 				</section>
 
-				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+				<section hidden class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 					<div class="mdl-card mdl-cell mdl-cell--12-col">
 						<div class="mdl-card__supporting-text">
 							<h4>Cose a caso</h4>
@@ -281,6 +281,27 @@
 						<div class="mdl-card__actions">
 							<a href="#" class="mdl-button">Pulsante che non fà nulla</a>
 						</div>
+					</div>
+				</section>
+				<section class="section--footer mdl-color--white mdl-grid" hidden="">
+				</section>
+			</div>
+			<div class="mdl-layout__tab-panel" id="text">
+				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+					<div class="mdl-card mdl-cell mdl-cell--12-col">
+						<div class="mdl-card__supporting-text">
+							<a class="mdl-typography--headline" id="aPercS">Space to %s</a>
+							<form action="percS">
+								<div class="mdl-textfield mdl-js-textfield">
+									<textarea class="mdl-textfield__input" type="text" id="percS" ></textarea>
+									<label class="mdl-textfield__label" for="percS">Text lines...</label>
+								</div>
+							</form>
+							<p id="Pperc"></p>
+						</div>
+						<!-- <div class="mdl-card__actions">
+							<a class="mdl-button" onclick="conversione()">Converti</a>
+						</div> -->
 					</div>
 				</section>
 				<section class="section--footer mdl-color--white mdl-grid" hidden="">
