@@ -96,6 +96,17 @@ function tabella() {
 
     // per la tabella
     var tabella = document.getElementById("tabella_persone");
+    var width = document.body.clientWidth;
+    var colonne =3;
+
+    if(width <= 420){
+        //per lo schermo del telefono, non centra tutta la tabella e ho rimosso l'anno
+        document.getElementById('data_di_nascita').style.display = "none";
+        colonne=2;
+    }else{
+        document.getElementById('data_di_nascita').style.display = "block";
+    }
+
     for (var p = 0; p<numero_persone; p++) {
 
         var row = tabella.insertRow(tabella.rows.length);
@@ -110,7 +121,7 @@ function tabella() {
     		dialog.close();   //si trova nel file main.js
     	};
 
-        for (var c = 0; c < 3; c++) {
+        for (var c = 0; c < colonne; c++) {
             	var cell = row.insertCell(c);
                 switch (c) {
                     case 0:
@@ -130,8 +141,10 @@ function tabella() {
         }
     }
 
-
-
-
-
+    if(tabella.rows.length>numero_persone+1){
+        for (var k = numero_persone; k >= 1; k--){
+            //per ricare la tabella, cancellando una possibile tabella precedente
+            tabella.deleteRow(k);
+        }
+    }
 };

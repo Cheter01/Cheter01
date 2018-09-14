@@ -63,7 +63,7 @@
 }
 </style>
 </head>
-<body class="mdl-demo mdl-color-text--grey-700" onload="background(); tabella(); saveToFirebase('null')">
+<body class="mdl-demo mdl-color-text--grey-700" onload="background(); tabella(); saveToFirebase('null')" onresize="tabella()">
 
 	<!-- loader -->
 	<div id="load_screen">
@@ -191,15 +191,13 @@
 					<!-- madal -->
 					<dialog class="mdl-dialog">
 						<!-- tabella -->
-
-						<!-- chiusura tabella -->
-						<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-color-text--accent" id="closing_button">
-							<i class="material-icons">close</i>
-						</button>
-
 						<!-- Expandable Textfield -->
-						<form action="#">
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+						<form action="#" id="textfield">
+							<!-- chiusura tabella -->
+							<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-color-text--accent" id="closing_button">
+								<i class="material-icons">close</i>
+							</button>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" id="search">
 								<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
 									<i class="material-icons">search</i>
 								</label>
@@ -208,36 +206,30 @@
 									<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
 								</div>
 							</div>								
-
+							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabella_persone">
+								<thead>
+									<tr style="background-color: rgba(96, 125, 139,0.1);">
+										<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent" id="nome">
+											<button class="mdl-button mdl-js-button mdl-data-table__cell--non-numeric mdl-color-text--accent mdl-js-ripple-effect" onclick="by_name()" id="filter_button">
+												Nome
+											</button>
+										</th>
+										<th class="mdl-color-text--accent" id="cognome">
+											<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_surname()" id="filter_button">
+												Cognome
+											</button>
+										</th>
+										<th class="mdl-color-text--accent" id="data_di_nascita">
+											<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_date()" id="filter_button">
+												Data di nascita
+											</button>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
 						</form>
-						<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="tabella_persone">
-							<thead>
-								<tr style="background-color: rgba(96, 125, 139,0.1);">
-									<th class="mdl-data-table__cell--non-numeric mdl-color-text--accent">
-										<button class="mdl-button mdl-js-button mdl-data-table__cell--non-numeric mdl-color-text--accent mdl-js-ripple-effect" onclick="by_name()" id="filter_button">
-											Nome
-										</button>
-									</th>
-									<th class="mdl-color-text--accent">
-										<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_surname()" id="filter_button">
-											Cognome
-										</button>
-									</th>
-									<th class="mdl-color-text--accent">
-										<button class="mdl-button mdl-js-button mdl-color-text--accent mdl-js-ripple-effect" onclick="by_date()" id="filter_button">
-											Data di nascita
-										</button>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr hidden>
-									<td>nome1</td>
-									<td>Cognome1</td>
-									<td>Giorno mese anno</td>
-								</tr>
-							</tbody>
-						</table>
 					</dialog>					
 				</section>
 
@@ -292,7 +284,7 @@
 						<div class="mdl-card__supporting-text">
 							<a class="mdl-typography--headline" id="aPercS">Space to %s</a>
 							<form action="percS">
-								<div class="mdl-textfield mdl-js-textfield">
+								<div class="mdl-textfield mdl-js-textfield" id="textarea">
 									<textarea class="mdl-textfield__input" type="text" id="percS" ></textarea>
 									<label class="mdl-textfield__label" for="percS">Text lines...</label>
 								</div>
@@ -310,9 +302,13 @@
 		</main>
 	</div>
 
+			
+
 	<a href="https://firechat-26edb.firebaseapp.com/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-color--accent mdl-color-text--accent-contrast mdl-js-ripple-effect">
 		<i class="material-icons">chat_bubble_outline</i>
 	</a>
+
+
 
 	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<script src="js/loading.js"></script> <!-- Loader -->

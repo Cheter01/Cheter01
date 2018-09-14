@@ -131,8 +131,12 @@ div#alchemy_circle {
   left: 8px;
 }
 
-.mdl-textfield{
+#textarea{
   width: 100%;
+}
+
+#search{
+  padding: 15px 5px;
 }
 
 #Pperc{
@@ -152,3 +156,4 @@ div#alchemy_circle {
   font-size:8vw;
   }
 }
+
