@@ -1,7 +1,7 @@
 
 // var value=20;
 var person = [
-{nome:"Edison", cognome:"Dantas", giorno_su_anno:25, giorno_su_mese:25, mese:"Gennaio", anno:2001, email:"edison.25012001@gmail.com", sesso: "Maschio", telefono: "+39 3473592560"},
+{nome:"Edison", cognome:"Dantas", giorno_su_anno:25, giorno_su_mese:25, mese:"Gennaio", anno:2001, email:"edison.dantakov@gmail.com", sesso: "Maschio", telefono: "+39 3473592560"},
 {nome:"Lorenzo", cognome:"Chesi", giorno_su_anno:57, giorno_su_mese:26, mese:"Febbraio", anno:2001, email:"lorenzo.chesi@live.it", sesso: "Maschio", telefono: "+39 3934811451"},
 {nome:"Francesco", cognome:"Del Mondo", giorno_su_anno:138, giorno_su_mese:18, mese:"Maggio", anno:2001, email:"Francethebest2001@gmail.com", sesso: "Maschio", telefono: "+39 3703293530"},
 {nome:"Chiara", cognome:"Dicesare", giorno_su_anno:166, giorno_su_mese:15, mese:"Giugno", anno:2001, email:"chiaradicesare001@gmail.com", sesso: "Femmina", telefono: "+39 3485873075"},
